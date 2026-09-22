@@ -1,0 +1,121 @@
+/* ==========================================================================
+   RESPONSIVO — breakpoints globais (1024px / 768px / 480px)
+   ========================================================================== */
+
+@media(max-width:1024px) {
+    #hero {
+        grid-template-columns: 1fr;
+        padding-top: calc(var(--nav-h) + 28px);
+        gap: 40px;
+        min-height: auto;
+        padding-bottom: 60px
+    }
+    .hero-right {
+        order: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+    .photo-card {
+        align-items: center
+    }
+    .photo-frame {
+        width: min(220px, 70vw)
+    }
+    .photo-chips {
+        max-width: min(220px, 70vw)
+    }
+    .photo-badge.pb-top {
+        right: -10px
+    }
+    .photo-badge.pb-bottom {
+        left: -10px
+    }
+    .hero-left {
+        text-align: center
+    }
+    .hero-badge,
+    .hero-desc,
+    .hero-btns,
+    .hero-stats {
+        margin-left: auto;
+        margin-right: auto
+    }
+    .hero-btns {
+        justify-content: center
+    }
+    .hero-stats {
+        justify-content: center
+    }
+    .about-wrap {
+        grid-template-columns: 1fr
+    }
+    .about-code-block {
+        display: none
+    }
+    .contact-wrap {
+        grid-template-columns: 1fr
+    }
+    .certs {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:768px) {
+    nav {
+        padding: 0 20px
+    }
+    .nav-links,
+    .nav-cta {
+        display: none
+    }
+    .hamburger {
+        display: flex
+    }
+    section {
+        padding: 56px 20px
+    }
+    #stack {
+        padding: 40px 0
+    }
+    .stack-head {
+        padding: 0 20px
+    }
+    .f-row {
+        grid-template-columns: 1fr
+    }
+    footer {
+        padding: 24px 20px
+    }
+    .exp-item {
+        grid-template-columns: 36px 1fr;
+        gap: 0 14px
+    }
+    .exp-grid::before {
+        left: 17px
+    }
+    .exp-dot {
+        width: 36px;
+        height: 36px;
+        font-size: .48rem
+    }
+    .exp-body::before {
+        left: -7px
+    }
+}
+
+@media(max-width:480px) {
+    .hero-name {
+        font-size: clamp(1.6rem, 10vw, 2.5rem)
+    }
+    .photo-frame {
+        width: min(180px, 75vw)
+    }
+    .photo-chips {
+        max-width: min(180px, 75vw)
+    }
+    .pb-top,
+    .pb-bottom {
+        display: none
+    }
+}

@@ -1,0 +1,273 @@
+/* ==========================================================================
+   COMPONENTES — cursor customizado, utilitários de reveal e botão flutuante do WhatsApp
+   ========================================================================== */
+
+.cur-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--cyan);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--cyan)
+}
+
+.cur-ring {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 229, 168, .45);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width .2s, height .2s, opacity .2s
+}
+/* ─── REVEAL BASE ─── */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(48px)
+}
+
+.split-char {
+    display: inline-block
+}
+
+.shooting-star {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 229, 168, 0), #00e5a8, rgba(255, 255, 255, .8), rgba(0, 229, 168, 0));
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 1
+}
+/* ─── WHATSAPP FIXED BTN ─── */
+
+.wa-wrap {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 990;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0
+}
+
+.wa-ring {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(0, 229, 168, .55);
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    pointer-events: none;
+    animation: waPulse 2.8s ease-out infinite
+}
+
+.wa-ring.r2 {
+    animation-delay: .93s;
+    border-color: rgba(0, 229, 168, .38)
+}
+
+.wa-ring.r3 {
+    animation-delay: 1.86s;
+    border-color: rgba(0, 229, 168, .2)
+}
+
+.wa-dec {
+    position: absolute;
+    pointer-events: none
+}
+
+.wa-dec.tl {
+    width: 11px;
+    height: 11px;
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid var(--cyan);
+    border-left: 2px solid var(--cyan)
+}
+
+.wa-dec.br {
+    width: 11px;
+    height: 11px;
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid var(--pink);
+    border-right: 2px solid var(--pink)
+}
+
+.wa-btn {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(8, 24, 32, .96) 0%, rgba(0, 229, 168, .07) 100%);
+    border: 1px solid rgba(0, 229, 168, .45);
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    color: var(--cyan);
+    text-decoration: none;
+    box-shadow: 0 0 26px rgba(0, 229, 168, .22), 0 0 52px rgba(0, 229, 168, .07);
+    overflow: hidden;
+    transition: color .3s;
+    animation: waGlow 3s ease-in-out infinite
+}
+
+.wa-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 40%, rgba(0, 229, 168, .05) 100%);
+    pointer-events: none
+}
+
+.wa-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: -5%;
+    background: linear-gradient(90deg, transparent, rgba(0, 229, 168, .7), rgba(255, 255, 255, .4), rgba(0, 229, 168, .7), transparent);
+    animation: waScanLine 3.5s ease-in-out infinite;
+    pointer-events: none
+}
+
+.wa-icon {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    z-index: 2;
+    transition: transform .3s, filter .3s
+}
+
+.wa-btn:hover .wa-icon {
+    transform: scale(1.14);
+    filter: drop-shadow(0 0 8px rgba(0, 229, 168, .9))
+}
+
+.wa-dot {
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    z-index: 3;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 7px var(--green);
+    animation: waDot 1.8s ease-in-out infinite
+}
+
+.wa-tooltip {
+    position: absolute;
+    right: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    background: rgba(5, 15, 20, .92);
+    border: 1px solid rgba(0, 229, 168, .22);
+    padding: 8px 16px;
+    backdrop-filter: blur(12px);
+    transition: opacity .28s, transform .28s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)
+}
+
+.wa-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid rgba(0, 229, 168, .22)
+}
+
+.wa-tooltip-label {
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .58rem;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    text-transform: uppercase
+}
+
+.wa-tooltip-num {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 2px
+}
+
+.wa-wrap:hover .wa-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0)
+}
+
+@keyframes waPulse {
+    0% {
+        transform: scale(1);
+        opacity: .8
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0
+    }
+}
+
+@keyframes waGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 26px rgba(0, 229, 168, .22), 0 0 52px rgba(0, 229, 168, .07)
+    }
+    50% {
+        box-shadow: 0 0 44px rgba(0, 229, 168, .45), 0 0 86px rgba(0, 229, 168, .15)
+    }
+}
+
+@keyframes waDot {
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 7px var(--green)
+    }
+    50% {
+        opacity: .25;
+        box-shadow: none
+    }
+}
+
+@keyframes waScanLine {
+    0% {
+        top: -5%;
+        opacity: 1
+    }
+    80% {
+        opacity: .5
+    }
+    100% {
+        top: 112%;
+        opacity: 0
+    }
+}
+
+@media(max-width:768px) {
+    .wa-wrap {
+        bottom: 20px;
+        right: 18px
+    }
+    .wa-tooltip {
+        display: none
+    }
+}

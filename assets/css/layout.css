@@ -1,0 +1,244 @@
+/* ==========================================================================
+   LAYOUT — navegação, estrutura base das seções e footer
+   ========================================================================== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 clamp(20px, 5vw, 60px);
+    height: var(--nav-h);
+    background: rgba(5, 15, 20, .88);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border);
+    transition: height .3s
+}
+
+nav.scrolled {
+    height: 58px
+}
+
+.nav-logo {
+    font-family: 'Orbitron', monospace;
+    font-size: .9rem;
+    font-weight: 900;
+    color: var(--cyan);
+    text-shadow: 0 0 18px rgba(0, 229, 168, .6);
+    letter-spacing: 2px;
+    text-decoration: none;
+    flex-shrink: 0
+}
+
+.nav-logo span {
+    color: var(--pink)
+}
+
+.nav-links {
+    display: flex;
+    gap: clamp(16px, 3vw, 36px);
+    list-style: none
+}
+
+.nav-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .2s;
+    position: relative
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--cyan);
+    box-shadow: 0 0 6px var(--cyan);
+    transition: width .3s
+}
+
+.nav-links a:hover {
+    color: var(--cyan)
+}
+
+.nav-links a:hover::after {
+    width: 100%
+}
+
+.nav-cta {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: .78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bg0);
+    background: var(--cyan);
+    padding: 9px 22px;
+    text-decoration: none;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background .2s, box-shadow .2s;
+    flex-shrink: 0
+}
+
+.nav-cta:hover {
+    background: var(--pink);
+    box-shadow: 0 0 20px var(--pink)
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 201
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cyan);
+    transition: all .3s
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg)
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg)
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 15, 20, .97);
+    backdrop-filter: blur(20px);
+    z-index: 199;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    transform: translateX(100%);
+    transition: transform .35s cubic-bezier(.77, 0, .175, 1)
+}
+
+.mobile-menu.open {
+    transform: translateX(0)
+}
+
+.mobile-menu a {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .2s
+}
+
+.mobile-menu a:hover {
+    color: var(--cyan)
+}
+/* ─── SECTION BASE ─── */
+
+section {
+    position: relative;
+    padding: clamp(60px, 10vw, 110px) clamp(24px, 6vw, 80px);
+    z-index: 1
+}
+
+.sec-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .66rem;
+    letter-spacing: 4px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px
+}
+
+.sec-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.4rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 14px
+}
+
+.sec-sub {
+    font-size: .98rem;
+    color: var(--muted);
+    max-width: 520px
+}
+
+.sec-head {
+    margin-bottom: clamp(36px, 6vw, 64px)
+}
+/* ─── FOOTER ─── */
+
+footer {
+    background: var(--bg0);
+    border-top: 1px solid var(--border);
+    padding: clamp(28px, 4vw, 48px) clamp(24px, 6vw, 80px);
+    z-index: 1;
+    position: relative
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px
+}
+
+.footer-inner p {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .64rem;
+    letter-spacing: 1px;
+    color: var(--muted)
+}
+
+.f-social {
+    display: flex;
+    gap: 10px
+}
+
+.f-sl {
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    text-decoration: none;
+    transition: all .2s;
+    font-size: .78rem;
+    font-family: 'Share Tech Mono', monospace
+}
+
+.f-sl:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    box-shadow: 0 0 10px rgba(0, 229, 168, .18)
+}
