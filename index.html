@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Cezar Ferreira — Full Stack Developer</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+    <!-- Estilos — a ordem importa: base → layout → seções → componentes → responsivo -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/sections/preloader.css" />
+    <link rel="stylesheet" href="assets/css/sections/hero.css" />
+    <link rel="stylesheet" href="assets/css/sections/skills.css" />
+    <link rel="stylesheet" href="assets/css/sections/experience.css" />
+    <link rel="stylesheet" href="assets/css/sections/projects.css" />
+    <link rel="stylesheet" href="assets/css/sections/marquee.css" />
+    <link rel="stylesheet" href="assets/css/sections/about.css" />
+    <link rel="stylesheet" href="assets/css/sections/contact.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+    <div class="cur-dot" id="curDot"></div>
+    <div class="cur-ring" id="curRing"></div>
+
+    <div id="preloader">
+        <div class="pl-corner pl-tl"></div>
+        <div class="pl-corner pl-tr"></div>
+        <div class="pl-corner pl-bl"></div>
+        <div class="pl-corner pl-br"></div>
+        <div class="pl-content">
+            <div class="pl-label">PORTFÓLIO · DESENVOLVEDOR FULL STACK</div>
+            <div class="pl-name" id="plName"></div>
+            <div class="pl-title">SINGLE FUTURE · SÃO PAULO, SP</div>
+            <div class="pl-progress">
+                <div class="pl-bar">
+                    <div class="pl-fill" id="plFill"></div>
+                </div>
+                <div class="pl-pct" id="plPct">0%</div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero">Início</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experiência</a>
+        <a href="#projects">Projetos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+    </div>
+
+    <nav id="nav">
+        <a href="#hero" class="nav-logo">MIGUEL<span>.</span>DEV</a>
+        <ul class="nav-links">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <a class="nav-cta" href="https://singlefuture.com.br/">Voltar</a>
+        <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-orb"></div>
+
+        <!-- LEFT: texto + stats -->
+        <div class="hero-left">
+            <div class="hero-badge">FULL STACK DEVELOPER · SÃO PAULO, SP</div>
+            <h1 class="hero-name">
+                <span class="ln1">MIGUEL CEZAR</span>
+                <span class="ln2">FERREIRA</span>
+            </h1>
+            <div class="hero-role">PHP · REACT · NODE.JS · PYTHON · AGENTES DE IA</div>
+            <p class="hero-desc">Mais de 3 anos construindo sistemas web escaláveis, APIs RESTful e agentes autônomos de IA. Fundador da Single Future, desenvolvedor no Grupo Webnauta e docente de desenvolvimento web no Senac.
+            </p>
+            <div class="hero-btns">
+                <a class="btn-p" href="#projects">Ver Projetos →</a>
+                <a class="btn-s" href="#contact">Entre em Contato</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-n" data-target="3">0</div>
+                    <div class="stat-l">Anos Exp.</div>
+                </div>
+                <div>
+                    <div class="stat-n" data-target="20">0</div>
+                    <div class="stat-l">Projetos</div>
+                </div>
+                <div>
+                    <div class="stat-n" data-target="20">0</div>
+                    <div class="stat-l">Tecnologias</div>
+                </div>
+                <div>
+                    <div class="stat-n" data-target="4">0</div>
+                    <div class="stat-l">Empresas</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: foto + terminal -->
+        <div class="hero-right">
+            <!-- Foto -->
+            <div class="photo-card">
+                <div class="photo-frame" id="photoFrame">
+                    <div class="scanner-line"></div>
+                    <div class="photo-corner-bl"></div>
+
+                                        <img class="photo-img" src="https://singlefuture.com.br/wp-content/uploads/2026/05/convertida.jpeg" alt="Miguel Cezar Ferreira" />
+
+
+
+                    <div class="photo-badge pb-top"><span class="pb-dot"></span>Disponível para projetos<span class="pb-line">Open to work</span></div>
+                    <div class="photo-badge pb-bottom">São Paulo, SP<span class="pb-line">Brazil · Remote OK</span>
+                    </div>
+                </div>
+
+                <div class="photo-chips">
+                    <a class="chip" href="https://github.com/MiguelFerreira31" target="_blank">
+                        <span class="chip-ico">⌥</span>
+                        <div><span class="chip-label">GitHub</span><span class="chip-val">MiguelFerreira31</span></div>
+                    </a>
+                    <a class="chip" href="https://linkedin.com/in/miguelcezarferreira" target="_blank">
+                        <span class="chip-ico">↗</span>
+                        <div><span class="chip-label">LinkedIn</span><span class="chip-val">miguelcezarferreira</span>
+                        </div>
+                    </a>
+                    <a class="chip" href="mailto:miguelccezarferreira@gmail.com">
+                        <span class="chip-ico">@</span>
+                        <div><span class="chip-label">Email</span><span class="chip-val">miguelccezarferreira</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Terminal animado -->
+            <div class="terminal" id="heroTerminal" style="margin-top:24px;width:100%;max-width:clamp(300px,38vw,460px)">
+                <div class="terminal-bar">
+                    <div class="t-dot t-dot-r"></div>
+                    <div class="t-dot t-dot-y"></div>
+                    <div class="t-dot t-dot-g"></div>
+                    <div class="t-title">miguel@singlefuture:~</div>
+                </div>
+                <div class="terminal-body" id="termBody"></div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills">
+        <div class="sec-head reveal">
+            <span class="sec-label">// HABILIDADES TÉCNICAS</span>
+            <h2 class="sec-title">Stack e Competências</h2>
+            <p class="sec-sub">Domínio sólido em back-end, front-end, agentes de IA, cloud e boas práticas de engenharia de software.</p>
+        </div>
+        <div class="skills-grid">
+            <div class="sk-card">
+                <div class="sk-ico">⚙️</div>
+                <h3>Back-End</h3>
+                <p>APIs REST e microsserviços em PHP, Node.js, Python e Java, com foco em escalabilidade.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">PHP</span><span class="sk-tag">Laravel</span><span class="sk-tag">Node.js</span><span class="sk-tag">Python</span><span class="sk-tag">Java
+                        (Spring Boot)</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico">🖥️</div>
+                <h3>Front-End</h3>
+                <p>Interfaces reativas com foco em UX, SEO técnico e acessibilidade. Animações GSAP.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">React</span><span class="sk-tag">Next.js</span><span class="sk-tag">Angular</span><span class="sk-tag">TypeScript</span><span class="sk-tag">GSAP</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico">🤖</div>
+                <h3>IA / Agentes Autônomos</h3>
+                <p>Criação de agentes autônomos de IA em Python, com orquestração de fluxos e integração com LLMs via API.
+                </p>
+                <div class="sk-tags">
+                    <span class="sk-tag">LangGraph</span><span class="sk-tag">Pydantic AI</span><span class="sk-tag">CrewAI</span><span class="sk-tag">OpenAI Agents SDK</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico">☁️</div>
+                <h3>Cloud & DevOps</h3>
+                <p>Deploy e infraestrutura em nuvem, com automação de pipelines de CI/CD.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">AWS EC2/S3/RDS</span><span class="sk-tag">Lambda</span><span class="sk-tag">LightSail</span><span class="sk-tag">Vercel</span><span class="sk-tag">GitHub Actions</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico">🗄️</div>
+                <h3>Banco de Dados</h3>
+                <p>Modelagem relacional, Prisma ORM e queries otimizadas para alta concorrência.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">PostgreSQL</span><span class="sk-tag">MySQL</span><span class="sk-tag">SQL
+                        Server</span><span class="sk-tag">Prisma ORM</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico">🌐</div>
+                <h3>CMS & WordPress</h3>
+                <p>Plugins customizados, Custom Post Types, CRON, APIs REST, Elementor/Divi avançado.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">WordPress</span><span class="sk-tag">Custom Post Types</span><span class="sk-tag">CRON</span><span class="sk-tag">Elementor/Divi</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico">📐</div>
+                <h3>Práticas & Outros</h3>
+                <p>Clean Architecture, SOLID, Design Patterns, Git e Scrum/Kanban no dia a dia.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">Clean Architecture</span><span class="sk-tag">SOLID</span><span class="sk-tag">Design Patterns</span><span class="sk-tag">JWT</span><span class="sk-tag">Socket.io</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ EXPERIÊNCIA ═══ -->
+    <section id="experience">
+        <div class="sec-head reveal">
+            <span class="sec-label">// TRAJETÓRIA PROFISSIONAL</span>
+            <h2 class="sec-title">Experiência</h2>
+            <p class="sec-sub">Atuação em freelance, CLT e estágio — sempre focado em entrega com qualidade técnica.</p>
+        </div>
+
+        <div class="exp-grid">
+
+            <div class="exp-item">
+                <div class="exp-dot-col">
+                    <div class="exp-dot" id="dot0">SN</div>
+                </div>
+                <div class="exp-body">
+                    <div class="exp-period">JUL 2026 — AGO 2026</div>
+                    <div class="exp-company">SENAC SÃO PAULO · SÃO PAULO (PRESENCIAL)</div>
+                    <div class="exp-role">Docente — Desenvolvimento Web <span class="exp-type free">CARTA
+                            CONVITE</span></div>
+                    <ul class="exp-list">
+                        <li>Docente da UC15 (108h) — Desenvolvimento e Organização de Elementos Estruturais de Sites — para turma de Habilitação Profissional Técnica em Informática, aulas de HTML, CSS, JavaScript e CMS de segunda a sexta, das 19h às 22h30.</li>
+                        <li>Ministrei aulas de HTML5 semântico, CSS3, Flexbox, CSS Grid, responsividade, acessibilidade e boas práticas de SEO, seguindo os padrões técnicos da W3C.</li>
+                        <li>Ensinei JavaScript e a biblioteca jQuery para validação de formulários, efeitos visuais e interatividade em páginas web.</li>
+                        <li>Apliquei as bibliotecas Bootstrap, Swiper e Boxicons na construção de layouts responsivos, carrosséis de conteúdo e iconografia de interface.</li>
+                        <li>Conduzi os alunos na instalação, customização e publicação de sites com ferramentas de CMS, com prática de FTP, cPanel, aaPanel e deploy em servidores locais e remotos.</li>
+                        <li>Desenvolvi material didático autoral em HTML, CSS e JavaScript, com identidade visual própria e animações em GSAP, e orientei os alunos na documentação técnica dos projetos.</li>
+                    </ul>
+                    <div class="exp-skills-bar" id="bar0">
+                        <div class="sk-bar-row"><span class="sk-bar-label">HTML/CSS</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="95"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">JavaScript</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="90"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">CMS/WordPress</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-stack"><span class="exp-tag">HTML5</span><span class="exp-tag">CSS3</span><span class="exp-tag">JavaScript</span><span class="exp-tag">jQuery</span><span class="exp-tag">Bootstrap</span><span class="exp-tag">Swiper</span><span class="exp-tag">Boxicons</span>
+                        <span
+                            class="exp-tag">GSAP</span><span class="exp-tag">CMS/WordPress</span><span class="exp-tag">FTP</span><span class="exp-tag">cPanel</span><span class="exp-tag">aaPanel</span></div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-dot-col">
+                    <div class="exp-dot" id="dot1">WN</div>
+                </div>
+                <div class="exp-body">
+                    <div class="exp-period">OUT 2025 — JUL 2026</div>
+                    <div class="exp-company">GRUPO WEBNAUTA · SÃO PAULO (HÍBRIDO)</div>
+                    <div class="exp-role">Desenvolvedor Full Stack <span class="exp-type clt">CLT</span></div>
+                    <ul class="exp-list">
+                        <li>Desenvolvi e mantive plugins WordPress customizados com PHP, JavaScript e React, incluindo Custom Post Types (CPT), taxonomias, automações via CRON e integração com ERPs, CRMs e plataformas B2B (Bis2Bis, Correios).</li>
+                        <li>Implementei integração de APIs REST com validação via Zod, autenticação JWT e boas práticas de segurança (sanitização e saneamento de dados).</li>
+                        <li>Construí sites e plataformas web responsivas com foco em UX/UI, performance, acessibilidade e SEO técnico, utilizando WordPress, PHP, JavaScript e React.</li>
+                        <li>Desenvolvi plugin de importação automatizada (Bis2Bis → WordPress) com execução agendada via CRON, sincronização periódica e tratamento de erros.</li>
+                        <li>Criei automações em Python (Selenium, Pandas) para coleta, processamento e análise de dados.
+                        </li>
+                        <li>Colaborei com equipes multidisciplinares em ciclos ágeis (Scrum/Kanban), entregando features com qualidade e prazo.</li>
+                    </ul>
+                    <div class="exp-skills-bar" id="bar1">
+                        <div class="sk-bar-row"><span class="sk-bar-label">WordPress</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="90"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">PHP / React</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="85"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">Python</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-stack"><span class="exp-tag">PHP</span><span class="exp-tag">Laravel</span><span class="exp-tag">WordPress</span><span class="exp-tag">Elementor</span><span class="exp-tag">JavaScript</span><span class="exp-tag">React</span><span class="exp-tag">Node.js</span>
+                        <span
+                            class="exp-tag">Python</span><span class="exp-tag">REST API</span><span class="exp-tag">JWT</span><span class="exp-tag">MySQL</span><span class="exp-tag">CI/CD</span></div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-dot-col">
+                    <div class="exp-dot" id="dot2">WD</div>
+                </div>
+                <div class="exp-body">
+                    <div class="exp-period">JUN 2025 — SET 2025</div>
+                    <div class="exp-company">GRUPO WEBNAUTA · SÃO PAULO (PRESENCIAL)</div>
+                    <div class="exp-role">Web Designer <span class="exp-type clt">CLT</span></div>
+                    <ul class="exp-list">
+                        <li>Criei e personalizei plataformas de ensino do zero, definindo identidade visual, layout de páginas e experiência do usuário com Elementor e desenvolvimento manual em HTML, CSS e JavaScript.
+                        </li>
+                        <li>Desenvolvi funcionalidades interativas com JavaScript puro para renderização dinâmica, transições e lógica de apresentação no front-end.</li>
+                        <li>Construí páginas web combinando Elementor com código customizado, garantindo responsividade e alinhamento com os requisitos de cada projeto.</li>
+                        <li>Criei automações em Python para cadastro em massa de alunos e geração de Custom Post Types, reduzindo trabalho manual repetitivo.</li>
+                        <li>Provisionei e gerenciei instâncias AWS EC2 e LightSail para hospedagem e deploy das aplicações dos clientes.</li>
+                    </ul>
+                    <div class="exp-skills-bar" id="bar2">
+                        <div class="sk-bar-row"><span class="sk-bar-label">Elementor</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="88"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">JavaScript</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="80"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">AWS</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-stack"><span class="exp-tag">HTML</span><span class="exp-tag">CSS</span><span class="exp-tag">JavaScript</span><span class="exp-tag">WordPress</span><span class="exp-tag">Elementor</span><span class="exp-tag">PHP</span><span class="exp-tag">Python</span>
+                        <span
+                            class="exp-tag">AWS EC2</span><span class="exp-tag">LightSail</span></div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-dot-col">
+                    <div class="exp-dot" id="dot3">EG</div>
+                </div>
+                <div class="exp-body">
+                    <div class="exp-period">MAI 2025 — JUN 2025</div>
+                    <div class="exp-company">ENGECOMMERCE · SÃO PAULO</div>
+                    <div class="exp-role">Programador Web <span class="exp-type estagio">ESTÁGIO</span></div>
+                    <ul class="exp-list">
+                        <li>Desenvolvimento Full Stack: PHP (Laravel) no back-end e React no front-end.</li>
+                        <li>Criação e integração de APIs RESTful com foco em escalabilidade, segurança e documentação.
+                        </li>
+                        <li>Desenvolvimento de landing pages responsivas de alta performance (UX, cross-browser).</li>
+                        <li>Participação em projetos de automação com Bots e Inteligência Artificial.</li>
+                    </ul>
+                    <div class="exp-skills-bar" id="bar3">
+                        <div class="sk-bar-row"><span class="sk-bar-label">Laravel</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="80"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">React</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="82"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">APIs REST</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-stack"><span class="exp-tag">PHP</span><span class="exp-tag">Laravel</span><span class="exp-tag">React</span><span class="exp-tag">APIs REST</span><span class="exp-tag">WordPress</span><span class="exp-tag">JavaScript</span><span class="exp-tag">HTML5</span>
+                        <span
+                            class="exp-tag">CSS3</span><span class="exp-tag">cPanel</span></div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-dot-col">
+                    <div class="exp-dot" id="dot4">SF</div>
+                </div>
+                <div class="exp-body">
+                    <div class="exp-period">SET 2024 — PRESENTE</div>
+                    <div class="exp-company">SINGLE FUTURE · FUNDADOR</div>
+                    <div class="exp-role">Desenvolvedor Full Stack <span class="exp-type free">FREELANCER</span></div>
+                    <ul class="exp-list">
+                        <li>Liderança de sistemas web end-to-end — plataforma de cardápio digital com pedidos em tempo real via Socket.io.</li>
+                        <li>Aplicações desktop .NET (C#, WinForms/WPF) para automação e gestão de dados internos.</li>
+                        <li>APIs RESTful e microserviços com JWT, integração de pagamentos Pix, Clean Architecture e SOLID.
+                        </li>
+                        <li>Deploy em AWS (EC2, S3, RDS, Lambda) com pipeline CI/CD via GitHub Actions.</li>
+                    </ul>
+                    <div class="exp-skills-bar" id="bar4">
+                        <div class="sk-bar-row"><span class="sk-bar-label">React/Node</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="88"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">AWS / DevOps</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="78"></div>
+                            </div>
+                        </div>
+                        <div class="sk-bar-row"><span class="sk-bar-label">.NET C#</span>
+                            <div class="sk-bar-track">
+                                <div class="sk-bar-fill" data-w="83"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-stack"><span class="exp-tag">React</span><span class="exp-tag">Next.js</span><span class="exp-tag">Node.js</span><span class="exp-tag">PHP</span><span class="exp-tag">.NET
+                            C#</span><span class="exp-tag">AWS</span><span class="exp-tag">Socket.io</span><span class="exp-tag">PostgreSQL</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══ PROJETOS ═══ -->
+    <section id="projects">
+        <div class="sec-head reveal">
+            <span class="sec-label">// PORTFÓLIO</span>
+            <h2 class="sec-title">Projetos em Destaque</h2>
+            <p class="sec-sub">Sistemas construídos com foco em escalabilidade, performance e entrega real de valor.</p>
+        </div>
+        <div class="proj-filters reveal">
+            <button class="f-btn active" data-filter="all">Todos</button>
+            <button class="f-btn" data-filter="web">Web App</button>
+            <button class="f-btn" data-filter="arch">Arquitetura / IA</button>
+        </div>
+        <div class="proj-grid" id="projGrid">
+
+            <div class="proj-card featured" data-cat="web">
+                <div class="proj-thumb">
+                    <div class="proj-badge">DESTAQUE</div>
+                    <div class="proj-inner c-c">🍽️</div>
+                    <div class="proj-scan"></div>
+                    <div class="proj-ov">
+                        <div class="proj-ov-links">
+                            <a href="https://cardapio-digital-delta-two.vercel.app/" target="_blank">DEMO AO VIVO ↗</a>
+                            <a href="https://github.com/singlefutureadm-agency/cardapio-digital" target="_blank" class="gh-link">GITHUB ↗</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Web App · Full Stack · Real-Time</span><span class="proj-yr">2025</span></div>
+                    <h3>Cardápio Digital</h3>
+                    <p>Plataforma completa para restaurantes: cliente escaneia QR Code da mesa, faz pedidos em tempo real via Socket.io, pagamento Pix com QR Code EMV, dashboard admin com kanban, analytics, shows com avaliações e feature flags por role.
+                        Deploy em Vercel + Render + Supabase.</p>
+                    <div class="proj-stats">
+                        <div class="proj-stat"><span class="ps-num">60+</span><span class="ps-lbl">Testes</span></div>
+                        <div class="proj-stat"><span class="ps-num">3</span><span class="ps-lbl">Roles</span></div>
+                        <div class="proj-stat"><span class="ps-num">5</span><span class="ps-lbl">Feature Flags</span>
+                        </div>
+                        <div class="proj-stat"><span class="ps-num">RT</span><span class="ps-lbl">Socket.io</span></div>
+                    </div>
+                    <div class="proj-tags">
+                        <span class="p-tag accent">React 19</span><span class="p-tag accent">Node.js</span><span class="p-tag accent">Socket.io</span><span class="p-tag">PostgreSQL</span><span class="p-tag">Prisma</span><span class="p-tag">Supabase</span>
+                        <span
+                            class="p-tag">Pix EMV
+                            </span><span class="p-tag">GSAP</span><span class="p-tag">Jest</span><span class="p-tag">Zod</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card" data-cat="web">
+                <div class="proj-thumb">
+                    <div class="proj-inner c-p">🔗</div>
+                    <div class="proj-scan"></div>
+                    <div class="proj-ov"><a href="https://github.com/MiguelFerreira31/url-shortener" target="_blank">VER
+                            GITHUB ↗</a></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Web App · Full Stack</span><span class="proj-yr">2025</span></div>
+                    <h3>Encurtador de URLs</h3>
+                    <p>Aplicação com painel de cliques, estatísticas por plataforma e visual Liquid Glass. Backend TypeScript com Prisma e nanoid. Frontend React com atualização automática a cada 5 segundos.</p>
+                    <div class="proj-tags"><span class="p-tag">React</span><span class="p-tag">TypeScript</span><span class="p-tag">Node.js</span><span class="p-tag">Prisma</span><span class="p-tag">Bootstrap</span><span class="p-tag">Liquid Glass</span></div>
+                </div>
+            </div>
+
+            <div class="proj-card" data-cat="web">
+                <div class="proj-thumb">
+                    <div class="proj-inner c-pu">EX</div>
+                    <div class="proj-scan"></div>
+                    <div class="proj-ov"><a href="https://github.com/MiguelFerreira31/exfe" target="_blank">VER GITHUB
+                            ↗</a></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Web App · MVC Próprio</span><span class="proj-yr">2025</span></div>
+                    <h3>EXFE</h3>
+                    <p>Aplicação web com SCSS, SwiperJS e BoxIcons. Backend PHP com framework MVC customizado e consumo de APIs externas. App mobile em desenvolvimento como próximo passo.</p>
+                    <div class="proj-tags"><span class="p-tag">PHP</span><span class="p-tag">HTML5</span><span class="p-tag">SCSS</span><span class="p-tag">JavaScript</span><span class="p-tag">SwiperJS</span><span class="p-tag">MVC</span></div>
+                </div>
+            </div>
+
+            <div class="proj-card" data-cat="arch">
+                <div class="proj-thumb">
+                    <div class="proj-inner c-a">AI</div>
+                    <div class="proj-scan"></div>
+                    <div class="proj-ov"><a href="https://singlefuture.com.br/desafio/" target="_blank">VER PROPOSTA
+                            ↗</a></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Arquitetura · IA · E-Learning</span><span class="proj-yr">2025</span></div>
+                    <h3>Desafio Técnico DevFullStack</h3>
+                    <p>Proposta de nova arquitetura para plataforma e-learning com geração de cursos personalizados via IA. Fluxo adaptativo: reutiliza aulas do catálogo ou gera novos conteúdos sob demanda, preservando o sistema de formações existente.</p>
+                    <div class="proj-tags"><span class="p-tag">Arquitetura</span><span class="p-tag">IA /
+                            LLM</span><span class="p-tag">E-Learning</span><span class="p-tag">API REST</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══ STACK MARQUEE ═══ -->
+    <section id="stack">
+        <div class="stack-head reveal">
+            <span class="sec-label">// TECNOLOGIAS</span>
+            <h2 class="sec-title">Stack Completa</h2>
+        </div>
+        <div class="stack-marquee">
+            <div class="stack-track">
+                <div class="s-item">
+                    <div class="s-dot"></div><span>PHP</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>Java</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>React</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>Next.js</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
+                    <span>Node.js</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>Angular</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>Laravel</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>Python</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>LangGraph</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>CrewAI</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>OpenAI Agents SDK</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>PostgreSQL</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
+                    <span>MySQL</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
+                    <span>AWS</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
+                    <span>Socket.io</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>WordPress</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>Prisma ORM</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
+                    <span>GitHub Actions</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>JWT</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>WinForms / WPF</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>GSAP</span>
+                </div>
+                <!-- duplicate -->
+                <div class="s-item">
+                    <div class="s-dot"></div><span>PHP</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>Java</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>React</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>Next.js</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
+                    <span>Node.js</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>Angular</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>Laravel</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>Python</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>LangGraph</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>CrewAI</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>OpenAI Agents SDK</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>PostgreSQL</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
+                    <span>MySQL</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
+                    <span>AWS</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
+                    <span>Socket.io</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>WordPress</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>Prisma ORM</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
+                    <span>GitHub Actions</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot"></div><span>JWT</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
+                    <span>WinForms / WPF</span>
+                </div>
+                <div class="s-item">
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
+                    <span>GSAP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about">
+        <div class="about-wrap">
+            <div class="about-code-block reveal">
+                <div class="acb-bar">
+                    <div class="t-dot t-dot-r" style="width:9px;height:9px"></div>
+                    <div class="t-dot t-dot-y" style="width:9px;height:9px"></div>
+                    <div class="t-dot t-dot-g" style="width:9px;height:9px"></div>
+                    <div class="acb-name">miguel.profile.ts</div>
+                </div>
+                <div class="acb-body">
+                    <span class="kw">interface</span> <span class="fn">Developer</span> {<br> &nbsp;&nbsp;name: <span class="str">"Miguel Cezar Ferreira"</span>;<br> &nbsp;&nbsp;role: <span class="str">"Full Stack Developer"</span>;<br> &nbsp;&nbsp;location:
+                    <span class="str">"São Paulo, SP"</span>;<br> &nbsp;&nbsp;experience: <span class="num">3</span>; <span class="cm">// years</span><br> &nbsp;&nbsp;education: <span class="str">"ADS · Cruzeiro do Sul"</span>;<br> &nbsp;&nbsp;backend:
+                    [<span class="str">"PHP"</span>, <span class="str">"Node.js"</span>, <span class="str">"Python"</span>, <span class="str">"Java"</span>];<br> &nbsp;&nbsp;frontend: [<span class="str">"React"</span>, <span class="str">"Next.js"</span>,
+                    <span class="str">"Angular"</span>];<br> &nbsp;&nbsp;ai: [<span class="str">"LangGraph"</span>, <span class="str">"CrewAI"</span>, <span class="str">"Pydantic AI"</span>];<br> &nbsp;&nbsp;cloud: <span class="str">"AWS"</span>;<br>                    &nbsp;&nbsp;languages: [<span class="str">"PT-BR"</span>, <span class="str">"EN"</span>];<br> &nbsp;&nbsp;openToWork: <span class="kw">true</span>;<br> }
+                    <br><br>
+                    <span class="kw">const</span> <span class="fn">status</span> = <span class="str">"Available"</span>;
+                    <span class="t-cursor"></span>
+                </div>
+            </div>
+
+            <div class="about-right reveal">
+                <span class="sec-label">// SOBRE MIM</span>
+                <h2 class="sec-title">Quem sou</h2>
+                <p>Desenvolvedor Full Stack com foco em sistemas web escaláveis, APIs RESTful e agentes autônomos de IA (LangGraph, Pydantic AI, CrewAI, OpenAI Agents SDK). Fundador da Single Future, desenvolvedor no Grupo Webnauta e docente de Desenvolvimento
+                    Web no Senac São Paulo.</p>
+                <p>Domínio em PHP/Laravel, React, Node.js, Python e Java (Spring Boot), com WordPress avançado, experiência em AWS, Clean Architecture, SOLID e metodologias ágeis. Inglês intermediário.</p>
+
+                <div class="certs">
+                    <div class="cert">
+                        <div class="cert-ico">🎓</div><span>ADS · Cruzeiro do Sul<small>Fev 2025 – Dez 2026</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">📜</div><span>Téc. Informática p/ Internet<small>Senac SP · Abr 2024 –
+                                Jun 2025</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">📜</div><span>Técnico em Informática<small>Senac SP · Ago 2022 – Mar
+                                2024</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">🏅</div><span>Agentes Autônomos (Agentic AI)<small>40h · Jul
+                                2026</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">🏅</div><span>Engenharia de Software<small>FIAP Nano · Jul 2025</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">🏅</div><span>User Experience (UX)<small>FIAP Nano · Jul 2025</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">📜</div><span>Inglês Intermediário<small>Senac · Fev 2025</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">📜</div><span>Dev Web Front-End 2: JavaScript<small>Senac · Nov
+                                2024</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">📜</div><span>Angular · Front-End<small>Senac · Jun 2024</small></span>
+                    </div>
+                    <div class="cert">
+                        <div class="cert-ico">📜</div><span>Criação de Sites WordPress<small>Senac · Nov 2023</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+        <div class="contact-wrap">
+            <div class="contact-left reveal">
+                <span class="sec-label">// CONTATO</span>
+                <h2 class="sec-title">Vamos Trabalhar Juntos</h2>
+                <p>Aberto a oportunidades, projetos freelance e parcerias. Resposta rápida garantida.</p>
+                <div class="c-methods">
+                    <a class="c-method" href="mailto:miguelccezarferreira@gmail.com"><span class="c-m-ico">✉️</span>
+                        <div><span class="c-m-lbl">E-mail</span><span
+                                class="c-m-val">miguelccezarferreira@gmail.com</span></div>
+                    </a>
+                    <a class="c-method" href="tel:+5511951863723"><span class="c-m-ico">📱</span>
+                        <div><span class="c-m-lbl">WhatsApp</span><span class="c-m-val">(11) 95186-3723</span></div>
+                    </a>
+                    <a class="c-method" href="https://linkedin.com/in/miguelcezarferreira" target="_blank"><span
+                            class="c-m-ico">💼</span>
+                        <div><span class="c-m-lbl">LinkedIn</span><span class="c-m-val">miguelcezarferreira</span></div>
+                    </a>
+                    <a class="c-method" href="https://github.com/MiguelFerreira31" target="_blank"><span
+                            class="c-m-ico">🐙</span>
+                        <div><span class="c-m-lbl">GitHub</span><span class="c-m-val">MiguelFerreira31</span></div>
+                    </a>
+                    <a class="c-method" href="https://singlefuture.com.br/miguel-ferreira/" target="_blank"><span
+                            class="c-m-ico">🌐</span>
+                        <div><span class="c-m-lbl">Portfólio</span><span
+                                class="c-m-val">singlefuture.com.br/miguel-ferreira</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="c-form reveal">
+                <div class="f-row">
+                    <div class="f-field"><label>Nome</label><input type="text" placeholder="Seu nome" /></div>
+                    <div class="f-field"><label>E-mail</label><input type="email" placeholder="seu@email.com" /></div>
+                </div>
+                <div class="f-field"><label>Assunto</label><input type="text" placeholder="Projeto, oportunidade, parceria..." /></div>
+                <div class="f-field"><label>Mensagem</label><textarea placeholder="Descreva sua proposta ou projeto..."></textarea></div>
+                <button class="f-submit" id="submitBtn" type="button">ENVIAR MENSAGEM →</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <p>© 2025 Miguel Cezar Ferreira · Full Stack Developer · São Paulo, SP</p>
+            <div class="f-social">
+                <a class="f-sl" href="https://github.com/MiguelFerreira31" target="_blank">GH</a>
+                <a class="f-sl" href="https://linkedin.com/in/miguelcezarferreira" target="_blank">IN</a>
+                <a class="f-sl" href="mailto:miguelccezarferreira@gmail.com">@</a>
+                <a class="f-sl" href="tel:+5511951863723">WA</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─── WHATSAPP FIXED BTN ─── -->
+    <div class="wa-wrap" id="waBtnWrap">
+        <span class="wa-ring"></span>
+        <span class="wa-ring r2"></span>
+        <span class="wa-ring r3"></span>
+        <span class="wa-dec tl"></span>
+        <span class="wa-dec br"></span>
+        <a href="https://wa.me/5511951863723" target="_blank" rel="noopener noreferrer" class="wa-btn" aria-label="Fale comigo no WhatsApp">
+            <span class="wa-dot"></span>
+            <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </a>
+        <div class="wa-tooltip">
+            <span class="wa-tooltip-label">WhatsApp</span>
+            <span class="wa-tooltip-num">(11) 95186-3723</span>
+        </div>
+    </div>
+
+
+    <!-- Bibliotecas de terceiros -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Bootstrap da aplicação (deve vir antes dos módulos) -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Módulos -->
+    <script src="assets/js/modules/preloader.js"></script>
+    <script src="assets/js/modules/cursor.js"></script>
+    <script src="assets/js/modules/nav.js"></script>
+    <script src="assets/js/modules/hero-canvas.js"></script>
+    <script src="assets/js/modules/terminal.js"></script>
+    <script src="assets/js/modules/hero-animations.js"></script>
+    <script src="assets/js/modules/reveal.js"></script>
+    <script src="assets/js/modules/counters.js"></script>
+    <script src="assets/js/modules/projects-filter.js"></script>
+    <script src="assets/js/modules/skills.js"></script>
+    <script src="assets/js/modules/contact-form.js"></script>
+    <script src="assets/js/modules/whatsapp.js"></script>
+</body>
+
+</html>

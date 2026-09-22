@@ -1,0 +1,76 @@
+/* ==========================================================================
+   BASE — reset, design tokens (CSS custom properties), tipografia e efeitos de fundo (grid + scanlines)
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+ :root {
+    --cyan: #00e5a8;
+    --pink: #ff0080;
+    --purple: #8b00ff;
+    --green: #00ff88;
+    --amber: #f59e0b;
+    --bg0: #050f14;
+    --bg1: #081820;
+    --bg2: #0d2030;
+    --bg3: #112535;
+    --text: #cceedd;
+    --muted: #4a7a65;
+    --muted2: #2d5043;
+    --glass: rgba(0, 229, 168, 0.04);
+    --border: rgba(0, 229, 168, 0.14);
+    --nav-h: 72px;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    background: var(--bg0);
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    cursor: crosshair
+}
+
+ ::-webkit-scrollbar {
+    width: 3px
+}
+
+ ::-webkit-scrollbar-track {
+    background: var(--bg0)
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--cyan);
+    border-radius: 2px
+}
+/* GRID + SCANLINES */
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(0, 229, 168, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 168, .025) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, .06) 2px, rgba(0, 0, 0, .06) 4px);
+    pointer-events: none;
+    z-index: 998
+}

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   SEÇÃO: STACK — marquee infinito de tecnologias
+   ========================================================================== */
+
+#stack {
+    background: var(--bg0);
+    padding: clamp(40px, 6vw, 70px) 0;
+    overflow: hidden
+}
+
+.stack-head {
+    padding: 0 clamp(24px, 6vw, 80px);
+    margin-bottom: 36px
+}
+
+.stack-marquee {
+    overflow: hidden;
+    padding: 10px 0
+}
+
+.stack-track {
+    display: flex;
+    gap: 24px;
+    animation: marquee 28s linear infinite;
+    width: max-content
+}
+
+.stack-track:hover {
+    animation-play-state: paused
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+.s-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    white-space: nowrap;
+    transition: border-color .2s
+}
+
+.s-item:hover {
+    border-color: rgba(0, 229, 168, .35)
+}
+
+.s-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 6px var(--cyan)
+}
+
+.s-item span {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .78rem;
+    letter-spacing: 1px;
+    color: var(--text)
+}
