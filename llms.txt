@@ -16,7 +16,7 @@ Em estudo: Clean Architecture, CI/CD e agentes de IA (sem projeto público ainda
 - [ProCert](https://github.com/singlefutureadm-agency/procert-app): migração de sistema PHP legado para NestJS, Prisma, PostgreSQL e React. Projeto em equipe, repositório da organização Single Future, licença proprietária
 - [Cardápio Digital](https://github.com/singlefutureadm-agency/cardapio-digital): pedidos em tempo real com React, Node.js, Socket.io e Supabase; 107 testes automatizados. Projeto freelance (Single Future), licença proprietária
 - [NFT Marketplace](https://github.com/MiguelFerreira31/nft-marketplace): desafio técnico front-end com React, TypeScript e TanStack Query, API simulada com MSW
-- Também: [material didático (Trilha UC 15)](https://github.com/MiguelFerreira31/aulaUC15), HTML, CSS e JavaScript usados nas aulas do Senac
+- [Trilha HTML & CSS (UC 15)](https://github.com/MiguelFerreira31/aulaUC15) ([online](https://miguelferreira31.github.io/aulaUC15/)): material didático autoral em HTML, CSS e JavaScript, usado nas aulas do Senac (UC 15, Desenvolvimento Web)
 
 ## Experiência
 - Cognizant: Desenvolvedor Full Stack (set 2026 - atual)

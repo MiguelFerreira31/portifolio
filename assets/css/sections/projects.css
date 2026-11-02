@@ -455,27 +455,46 @@
     letter-spacing: .08em
 }
 
-/* 4 cards: grade 2x2 equilibrada; linha "Também" discreta */
+/* grade 2x2 (4 colunas >=2200px); flex centraliza linhas incompletas dos filtros */
 .proj-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr))
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    --n: 2
+}
+
+.proj-card {
+    flex: 0 0 calc((100% - (var(--n) - 1) * 20px) / var(--n));
+    min-width: 0
 }
 
 @media(max-width:700px) {
     .proj-grid {
-        grid-template-columns: 1fr
+        --n: 1
     }
 }
 
-.proj-note {
-    margin-top: 28px;
-    text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: .8rem;
-    color: var(--muted);
-    line-height: 1.6
+/* card 5 (material didático): linha inteira, layout horizontal; evita órfão em 2 ou 4 colunas */
+@media(min-width:701px) {
+    .proj-wide {
+        flex-basis: 100%;
+        flex-direction: row
+    }
+    .proj-wide .proj-thumb {
+        flex: 0 0 40%;
+        align-self: flex-start
+    }
+    .proj-wide p {
+        min-height: 0
+    }
+    .proj-wide .proj-body {
+        justify-content: center
+    }
+    .proj-wide .proj-links {
+        margin-top: 20px
+    }
 }
 
-.proj-note a,
 .proj-inline {
     color: var(--cyan);
     text-decoration: underline;

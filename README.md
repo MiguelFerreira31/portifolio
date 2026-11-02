@@ -232,7 +232,7 @@ do carregamento.
 | 1 | **Hero** | Nome, cargo, stats animadas, foto com badges e terminal simulado |
 | 2 | **Skills** | 7 cards (Back-End, Front-End, Banco de Dados, Cloud & DevOps, IA/Agentes, WordPress e Práticas), cada tag separada em "Uso diário", "Já utilizei" e "Em estudo" |
 | 3 | **Experiência** | Timeline com Cognizant, Senac SP, Grupo Webnauta (2 cargos) e F. R. Cont |
-| 4 | **Projetos** | 4 cards em grade 2x2, filtráveis (Todos / Full Stack / Front-End), com links para GitHub e deploy, e linha "Também" para o material didático |
+| 4 | **Projetos** | 5 cards (grade 2x2 mais o material didático em linha inteira), filtráveis (Todos / Full Stack / Front-End / Material Didático), com links para GitHub e deploy |
 | 5 | **Stack** | Marquee infinito com a stack, começando pelo uso diário |
 | 6 | **Sobre** | Bio, bloco de código `miguel.profile.ts`, formação e certificações |
 | 7 | **Contato** | Canais diretos (e-mail, telefone/WhatsApp, LinkedIn, GitHub) e formulário que abre o WhatsApp com a mensagem pronta |
@@ -246,21 +246,21 @@ do carregamento.
 | **ProCert** | NestJS, TypeScript, Prisma, PostgreSQL, React | Projeto em equipe (organização Single Future, licença proprietária) | [GitHub](https://github.com/singlefutureadm-agency/procert-app) |
 | **Cardápio Digital** | React, Node.js, Express, PostgreSQL, Supabase, Socket.io | Freelance (Single Future, licença proprietária) | [GitHub](https://github.com/singlefutureadm-agency/cardapio-digital) |
 | **NFT Marketplace** | React, TypeScript, Vite, TanStack Query, Tailwind CSS, shadcn/ui | Desafio técnico (API simulada com MSW) | [GitHub](https://github.com/MiguelFerreira31/nft-marketplace) |
-
-Fora do grid, como link discreto: [Trilha HTML & CSS (UC 15)](https://github.com/MiguelFerreira31/aulaUC15), material didático das aulas do Senac.
+| **Trilha HTML & CSS (UC 15)** | HTML, CSS, JavaScript | Material didático (aulas do Senac) | [GitHub](https://github.com/MiguelFerreira31/aulaUC15) · [Online](https://miguelferreira31.github.io/aulaUC15/) |
 O Encurtador de URLs (`url-shortener`) saiu do portfólio; o repositório continua no GitHub.
 
 #### Projetos em destaque e critérios
 
-Entram no grid os quatro projetos com mais evidência pública verificável nos próprios repositórios:
+Entram no grid quatro projetos com mais evidência pública verificável nos próprios repositórios:
 
 1. **Alinhamento com a stack principal** (Java/Spring Boot/Angular/PostgreSQL): o LMS Lite vem primeiro.
 2. **Testes, CI e documentação**: LMS (52 testes de integração, CI, AUDITORIA.md), Cardápio (107 testes), ProCert (suíte e2e e CI) e NFT Marketplace (Vitest, Playwright, Lighthouse CI, ARCHITECTURE.md).
 3. **Código ou produto no ar**: ProCert, Cardápio e NFT têm deploy; o LMS ainda não.
 4. **Honestidade sobre autoria e contexto**: cada card indica "Projeto em equipe", "Freelance" ou "Desafio técnico", conforme o que o repositório mostra.
 
-Ficaram de fora o Encurtador de URLs (desafio simples, sem testes nem CI) e a Trilha UC 15 (material de aula, não um produto).
-O número no hero ("Projetos em destaque") é igual ao de cards exibidos.
+A Trilha UC 15 entra como quinto card, na categoria própria "Material Didático" (não é um produto, por isso não segue os critérios acima).
+Ficou de fora o Encurtador de URLs (desafio simples, sem testes nem CI).
+O número no hero ("Projetos") é igual ao de cards exibidos.
 
 ---
 
