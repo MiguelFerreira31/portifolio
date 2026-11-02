@@ -47,6 +47,17 @@ body {
     }
 }
 
+/* seleção de texto no verde do tema, com texto escuro */
+::selection {
+    background: var(--cyan);
+    color: var(--bg0)
+}
+
+::-moz-selection {
+    background: var(--cyan);
+    color: var(--bg0)
+}
+
  ::-webkit-scrollbar {
     width: 3px
 }
