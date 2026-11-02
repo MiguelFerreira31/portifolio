@@ -17,16 +17,16 @@
         txt: '{'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"backend"</span>: <span class="t-str">["Java","Spring Boot","PHP","Node.js"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"backend"</span>: <span class="t-str">["Java","Spring Boot 3","PHP"]</span>,'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"frontend"</span>: <span class="t-str">["Angular","React","Next.js","TypeScript"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"frontend"</span>: <span class="t-str">["Angular","TypeScript","React"]</span>,'
     }, {
         t: 'out',
         txt: '&nbsp;&nbsp;<span class="t-key">"database"</span>: <span class="t-str">["PostgreSQL","MySQL","Flyway"]</span>,'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"cloud"</span>: <span class="t-str">["AWS","Docker","Vercel","Supabase"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"devops"</span>: <span class="t-str">["AWS","Docker","Git"]</span>,'
     }, {
         t: 'out',
         txt: '&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">"open_to_work"</span>'
