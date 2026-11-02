@@ -67,3 +67,8 @@
     letter-spacing: 1px;
     color: var(--text)
 }
+
+/* wrapper só para aria-hidden: não pode virar um item flex extra */
+.s-dup {
+    display: contents
+}

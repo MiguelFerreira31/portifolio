@@ -3,6 +3,7 @@
    ========================================================================== */
 
 (function() {
+    if (!matchMedia('(pointer: fine)').matches) return;
     const dot = document.getElementById('curDot'),
         ring = document.getElementById('curRing');
     let mx = 0,
@@ -11,7 +12,8 @@
         ry = 0;
     document.addEventListener('mousemove', e => {
         mx = e.clientX;
-        my = e.clientY
+        my = e.clientY;
+        document.body.classList.add('cursor-on')
     });
     (function loop() {
         rx += (mx - rx) * .12;

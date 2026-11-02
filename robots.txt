@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://miguelferreira31.github.io/portifolio/sitemap.xml

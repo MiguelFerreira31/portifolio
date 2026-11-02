@@ -59,15 +59,6 @@ gsap.utils.toArray('.exp-item').forEach((item, i) => {
                     duration: .8,
                     ease: 'power2.out'
                 });
-                /* progress bars */
-                item.querySelectorAll('.sk-bar-fill').forEach(b => {
-                    gsap.to(b, {
-                        width: b.dataset.w + '%',
-                        duration: 1.3,
-                        ease: 'power2.out',
-                        delay: .3
-                    });
-                });
             }
         }
     });
@@ -75,8 +66,10 @@ gsap.utils.toArray('.exp-item').forEach((item, i) => {
 
 /* ── SECTION TITLE SPLIT ── */
 document.querySelectorAll('.sec-title').forEach(el => {
-    const html = el.innerHTML;
-    el.innerHTML = html.replace(/(\S)/g, '<span class="split-char" style="opacity:0;display:inline-block">$1</span>');
+    const text = el.textContent;
+    el.setAttribute('aria-label', text);
+    /* uma span por palavra impede a quebra de linha no meio de uma palavra */
+    el.innerHTML = text.split(' ').map(w => '<span class="split-word" aria-hidden="true">' + w.replace(/(\S)/g, '<span class="split-char" style="opacity:0">$1</span>') + '</span>').join(' ');
     gsap.to(el.querySelectorAll('.split-char'), {
         opacity: 1,
         y: 0,

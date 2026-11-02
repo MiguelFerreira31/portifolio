@@ -17,16 +17,16 @@
         txt: '{'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"backend"</span>: <span class="t-str">["PHP","Node.js","Python","Java"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"backend"</span>: <span class="t-str">["Java","Spring Boot 3","PHP"]</span>,'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"frontend"</span>: <span class="t-str">["React","Next.js","Angular"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"frontend"</span>: <span class="t-str">["Angular","TypeScript","React"]</span>,'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"ai_agents"</span>: <span class="t-str">["LangGraph","CrewAI","OpenAI SDK"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"database"</span>: <span class="t-str">["PostgreSQL","MySQL","Flyway"]</span>,'
     }, {
         t: 'out',
-        txt: '&nbsp;&nbsp;<span class="t-key">"cloud"</span>: <span class="t-str">["AWS","EC2","Lambda","S3"]</span>,'
+        txt: '&nbsp;&nbsp;<span class="t-key">"devops"</span>: <span class="t-str">["AWS","Docker","Git"]</span>,'
     }, {
         t: 'out',
         txt: '&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">"open_to_work"</span>'
@@ -35,13 +35,13 @@
         txt: '}'
     }, {
         t: 'prompt',
-        txt: 'node --version && ping singlefuture.com.br'
+        txt: 'java --version && mvn spring-boot:run'
     }, {
         t: 'out',
-        txt: 'v20.11.0'
+        txt: 'openjdk · Spring Boot 3'
     }, {
         t: 'out',
-        txt: '<span class="t-val">PONG</span> · latency <span class="t-str">12ms</span> · uptime <span class="t-str">99.9%</span>'
+        txt: '<span class="t-val">Started</span> · API REST <span class="t-str">:8080</span> · JWT <span class="t-str">ON</span>'
     }, {
         t: 'prompt',
         txt: '<span class="t-cursor"></span>',
@@ -54,7 +54,7 @@
         lines.forEach((l, i) => {
             const span = document.createElement('span');
             span.className = 't-line';
-            if (l.t === 'prompt') span.innerHTML = `<span class="t-prompt">miguel@sf</span><span style="color:var(--muted)">:</span><span style="color:var(--purple)">~</span><span style="color:var(--muted)">$</span> <span class="t-cmd">${l.txt}</span>`;
+            if (l.t === 'prompt') span.innerHTML = `<span class="t-prompt">miguel@dev</span><span style="color:var(--muted)">:</span><span style="color:var(--purple)">~</span><span style="color:var(--muted)">$</span> <span class="t-cmd">${l.txt}</span>`;
             else span.innerHTML = l.txt;
             body.appendChild(span);
         });

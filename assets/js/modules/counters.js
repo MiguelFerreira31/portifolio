@@ -21,10 +21,10 @@
                     delay: i * .12,
                     ease: 'power2.out',
                     onUpdate: function() {
-                        el.textContent = Math.round(this.targets()[0].v)
+                        el.textContent = Math.round(this.targets()[0].v) + (el.dataset.suffix || '')
                     },
                     onComplete: () => {
-                        el.textContent = t;
+                        el.textContent = t + (el.dataset.suffix || '');
                         el.classList.remove('counting')
                     }
                 });

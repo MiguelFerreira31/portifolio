@@ -46,7 +46,7 @@
 
 .pl-label {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .58rem;
+    font-size: .72rem;
     letter-spacing: 6px;
     color: var(--cyan);
     text-transform: uppercase;
@@ -55,11 +55,17 @@
 
 .pl-name {
     font-family: 'Orbitron', monospace;
-    font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+    font-size: clamp(1.5rem, 3.8vw, 3.2rem);
     font-weight: 900;
-    letter-spacing: clamp(4px, 1.2vw, 14px);
-    line-height: 1;
-    min-height: 1.3em
+    letter-spacing: clamp(2px, .8vw, 9px);
+    line-height: 1.25;
+    min-height: 1.3em;
+    text-align: center
+}
+
+.pl-word {
+    display: inline-block;
+    white-space: nowrap
 }
 
 .pl-char {
@@ -75,8 +81,10 @@
 
 .pl-title {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .62rem;
-    letter-spacing: 5px;
+    font-size: .72rem;
+    letter-spacing: clamp(1px, .6vw, 5px);
+    max-width: 92vw;
+    text-align: center;
     color: var(--muted);
     text-transform: uppercase;
     opacity: 0
@@ -120,7 +128,7 @@
 
 .pl-pct {
     font-family: 'Orbitron', monospace;
-    font-size: .62rem;
+    font-size: .72rem;
     color: var(--cyan);
     letter-spacing: 3px
 }
