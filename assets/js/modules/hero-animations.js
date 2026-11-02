@@ -5,6 +5,8 @@
 (function() {
     function startHero() {
         window.Portfolio.renderTerminal();
+        window.dispatchEvent(new Event('portfolio:hero'));
+        if (!window.Portfolio.canAnimate) return;
         gsap.timeline()
             .to('.hero-badge', {
                 opacity: 1,
@@ -133,6 +135,9 @@
         });
     }
 
+    window.Portfolio.startHero = startHero;
+    if (!window.Portfolio.canAnimate) return;
+
     gsap.to('#heroCanvas', {
         opacity: .5,
         y: 80,
@@ -154,6 +159,4 @@
         repeat: -1,
         delay: 2
     });
-
-    window.Portfolio.startHero = startHero;
 })();

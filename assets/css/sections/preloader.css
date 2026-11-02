@@ -167,3 +167,7 @@
     border-bottom: 1px solid rgba(255, 0, 128, .5);
     border-right: 1px solid rgba(255, 0, 128, .5)
 }
+
+.no-pl #preloader {
+    display: none
+}

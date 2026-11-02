@@ -3,6 +3,7 @@
    ========================================================================== */
 
 (function() {
+    if (!window.Portfolio.canAnimate) return;
     const cv = document.getElementById('heroCanvas'),
         ctx = cv.getContext('2d');
     let W, H, stars = [],
@@ -40,7 +41,27 @@
         });
     }
 
+    let running = false,
+        visible = true,
+        raf = 0,
+        spawnTimer = 0;
+
+    /* roda só com a aba visível e o hero na viewport */
+    function sync() {
+        const want = visible && !document.hidden;
+        if (want && !running) {
+            running = true;
+            raf = requestAnimationFrame(draw);
+            spawnTimer = setInterval(spawnMeteor, 2200);
+        } else if (!want && running) {
+            running = false;
+            cancelAnimationFrame(raf);
+            clearInterval(spawnTimer);
+        }
+    }
+
     function draw() {
+        if (!running) return;
         ctx.clearRect(0, 0, W, H);
         /* Ambient nebula */
         const nb = ctx.createRadialGradient(W * .42, H * .3, 0, W * .42, H * .3, W * .52);
@@ -105,14 +126,21 @@
             }
             if (m.life >= m.maxLife || m.x > W + 200 || m.y > H + 200) meteors.splice(i, 1);
         }
-        requestAnimationFrame(draw);
+        raf = requestAnimationFrame(draw);
     }
-    setInterval(spawnMeteor, 2200);
     setTimeout(spawnMeteor, 700);
     setTimeout(spawnMeteor, 1600);
     resize();
-    draw();
+    sync();
     window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', sync);
+    if ('IntersectionObserver' in window) {
+        new IntersectionObserver(([e]) => {
+            visible = e.isIntersecting;
+            cv.parentElement.classList.toggle('hero-off', !visible);
+            sync();
+        }).observe(cv);
+    }
 })();
 
 

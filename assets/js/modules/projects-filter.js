@@ -14,7 +14,7 @@
             const match = cat === 'all' || c.dataset.cat === cat;
             if (match) {
                 c.style.display = '';
-                gsap.fromTo(c, {
+                if (window.gsap) gsap.fromTo(c, {
                     opacity: 0,
                     scale: .95
                 }, {
@@ -23,7 +23,8 @@
                     duration: .38,
                     ease: 'power2.out'
                 })
-            } else gsap.to(c, {
+            } else if (!window.gsap) c.style.display = 'none';
+            else gsap.to(c, {
                 opacity: 0,
                 scale: .95,
                 duration: .22,

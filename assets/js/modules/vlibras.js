@@ -7,6 +7,12 @@
 (function() {
     const s = document.createElement('script');
     s.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
-    s.onload = () => new window.VLibras.Widget('https://vlibras.gov.br/app');
+    s.async = true;
+    s.onload = () => {
+        try {
+            if (window.VLibras && window.VLibras.Widget) new window.VLibras.Widget('https://vlibras.gov.br/app');
+        } catch (e) { /* serviço indisponível: o site segue normal */ }
+    };
+    s.onerror = () => {};
     document.body.appendChild(s);
 })();

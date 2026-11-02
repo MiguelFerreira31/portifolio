@@ -58,6 +58,7 @@
             else span.innerHTML = l.txt;
             body.appendChild(span);
         });
+        if (!window.Portfolio.canAnimate) return;
         const els = body.querySelectorAll('.t-line');
         gsap.to(els, {
             opacity: 1,

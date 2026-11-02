@@ -1,15 +1,18 @@
 /* ==========================================================================
    MAIN — bootstrap da aplicação
-   Registra os plugins do GSAP, bloqueia o scroll durante o preloader e cria
-   o namespace global usado para a comunicação entre os módulos.
-   Deve ser carregado ANTES de qualquer arquivo de assets/js/modules/.
+   Detecta GSAP (carregado com defer + SRI), registra os plugins e cria o
+   namespace global usado pelos módulos. Deve vir ANTES de assets/js/modules/.
+   Sem GSAP (CDN fora do ar, SRI recusado): classes no-anim/no-gsap deixam o
+   site totalmente visível e estático.
    ========================================================================== */
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+const root = document.documentElement;
+if (!window.gsap || !window.ScrollTrigger) root.classList.add('no-anim', 'no-gsap');
+else gsap.registerPlugin(ScrollTrigger, window.ScrollToPlugin);
 
-/* Namespace único da aplicação — evita poluir o escopo global.
-   Os módulos registram aqui apenas o que precisa ser chamado de fora. */
+/* Namespace único da aplicação — evita poluir o escopo global. */
 window.Portfolio = window.Portfolio || {};
-
-/* O scroll é liberado pelo preloader ao final do carregamento. */
-document.body.style.overflowY = 'hidden';
+/* true quando há GSAP e o usuário não pediu movimento reduzido */
+window.Portfolio.canAnimate = !root.classList.contains('no-anim');
+/* pausa animações quando a aba está oculta (CSS: html.paused) */
+document.addEventListener('visibilitychange', () => root.classList.toggle('paused', document.hidden));

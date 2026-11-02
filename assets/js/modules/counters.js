@@ -3,11 +3,8 @@
    ========================================================================== */
 
 (function() {
+    if (!window.Portfolio.canAnimate) return;
     let ran = false;
-    /* o HTML já traz o valor final (para robôs sem JS); aqui o contador volta a 0 antes de animar */
-    document.querySelectorAll('[data-target]').forEach(el => {
-        el.textContent = '0' + (el.dataset.suffix || '');
-    });
     ScrollTrigger.create({
         trigger: '.hero-stats',
         start: 'top 85%',
@@ -16,9 +13,10 @@
             ran = true;
             document.querySelectorAll('[data-target]').forEach((el, i) => {
                 const t = +el.dataset.target;
+                /* o valor final já está no HTML: a contagem parte de 1 e nunca mostra o glifo "0" */
                 el.classList.add('counting');
                 gsap.to({
-                    v: 0
+                    v: 1
                 }, {
                     v: t,
                     duration: 1.8,

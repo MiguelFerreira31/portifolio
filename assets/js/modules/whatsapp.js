@@ -6,8 +6,9 @@
     const wrap = document.getElementById('waBtnWrap');
     if (!wrap) return;
     const btn = wrap.querySelector('.wa-btn');
-    /* entrada após preloader */
-    gsap.fromTo(wrap, {
+    if (!window.Portfolio.canAnimate) return;
+    /* entrada após o preloader: disparada pelo evento do hero */
+    window.addEventListener('portfolio:hero', () => gsap.fromTo(wrap, {
         opacity: 0,
         y: 24,
         scale: .75
@@ -16,7 +17,6 @@
         y: 0,
         scale: 1,
         duration: .9,
-        delay: 2.8,
         ease: 'back.out(1.6)',
         onComplete: () => gsap.to(wrap, {
             y: '-=9',
@@ -25,7 +25,7 @@
             yoyo: true,
             repeat: -1
         })
-    });
+    }), { once: true });
     /* hover scale */
     wrap.addEventListener('mouseenter', () => gsap.to(btn, {
         scale: 1.1,

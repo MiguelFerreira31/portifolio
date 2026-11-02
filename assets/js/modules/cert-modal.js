@@ -13,7 +13,14 @@
         verifyLink = document.getElementById('certVerify');
     let opener = null;
 
+    /* touch ou navegador sem visualizador de PDF embutido: abre direto em nova aba */
+    const direct = () => matchMedia('(pointer: coarse)').matches || navigator.pdfViewerEnabled === false;
+
     function open(btn) {
+        if (direct()) {
+            window.open(btn.dataset.pdf, '_blank', 'noopener');
+            return;
+        }
         opener = btn;
         title.textContent = btn.dataset.title;
         frame.title = 'Certificado: ' + btn.dataset.title;
