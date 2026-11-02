@@ -1,21 +1,22 @@
 # Miguel Cezar Ferreira
 
-> Desenvolvedor Full Stack em São Paulo (SP), com mais de 2 anos de experiência em sistemas web escaláveis, APIs RESTful e WordPress avançado. Atua na Cognizant modernizando sistemas legados para Spring Boot 3 e Angular, é docente no Senac São Paulo e mantém a marca freelance Single Future. Inglês profissional.
+> Desenvolvedor Full Stack em São Paulo (SP), com foco em Java/Spring Boot e Angular e mais de 1 ano de experiência profissional em desenvolvimento web (desde 2025). Atua na Cognizant em modernização de sistemas legados, foi docente de Desenvolvimento Web no Senac São Paulo em 2026 e mantém a marca de projetos freelance Single Future. Inglês intermediário.
 
-Stack principal: Java, Spring Boot, Angular, TypeScript, React, Node.js, PHP, Python, PostgreSQL, MySQL, AWS, Docker, WordPress e agentes de IA (LangGraph, CrewAI, Pydantic AI).
+Stack principal (uso diário): Java, Spring Boot, Angular, TypeScript, PostgreSQL, Docker e Git.
+Já utilizei: React, Node.js, PHP/Laravel, Python, MySQL, AWS e WordPress (projetos e Grupo Webnauta).
+Em estudo: Clean Architecture, CI/CD e agentes de IA (sem projeto público ainda).
 
 ## Perfis
 - [Portfólio](https://miguelferreira31.github.io/portifolio/): experiência, projetos, certificações e contato
 - [GitHub](https://github.com/MiguelFerreira31): código-fonte dos projetos
 - [LinkedIn](https://linkedin.com/in/miguelcezarferreira): perfil profissional
 
-## Projetos (código aberto)
-- [LMS Lite](https://github.com/MiguelFerreira31/lms): gestão de cursos com Java, Spring Boot, Angular, PostgreSQL e JWT
-- [ProCert](https://github.com/singlefutureadm-agency/procert-app): migração de sistema PHP legado para NestJS, Prisma, PostgreSQL e React
-- [Cardápio Digital](https://github.com/singlefutureadm-agency/cardapio-digital): pedidos em tempo real com React, Node.js, Socket.io e Supabase
-- [NFT Marketplace](https://github.com/MiguelFerreira31/nft-marketplace): desafio front-end com React, TypeScript e TanStack Query
-- [Encurtador de URLs](https://github.com/MiguelFerreira31/url-shortener): Node.js, Express, Prisma e React
-- [Trilha HTML & CSS (UC 15)](https://github.com/MiguelFerreira31/aulaUC15): material didático em HTML, CSS e JavaScript
+## Projetos em destaque (código aberto para consulta)
+- [LMS Lite](https://github.com/MiguelFerreira31/lms): gestão de cursos com Java, Spring Boot, Angular, PostgreSQL e JWT; 52 testes de integração (Testcontainers), Flyway, CI e [AUDITORIA.md](https://github.com/MiguelFerreira31/lms/blob/master/AUDITORIA.md) (N+1 de 36 para 4 queries). Projeto em equipe
+- [ProCert](https://github.com/singlefutureadm-agency/procert-app): migração de sistema PHP legado para NestJS, Prisma, PostgreSQL e React. Projeto em equipe, repositório da organização Single Future, licença proprietária
+- [Cardápio Digital](https://github.com/singlefutureadm-agency/cardapio-digital): pedidos em tempo real com React, Node.js, Socket.io e Supabase; 107 testes automatizados. Projeto freelance (Single Future), licença proprietária
+- [NFT Marketplace](https://github.com/MiguelFerreira31/nft-marketplace): desafio técnico front-end com React, TypeScript e TanStack Query, API simulada com MSW
+- Também: [material didático (Trilha UC 15)](https://github.com/MiguelFerreira31/aulaUC15), HTML, CSS e JavaScript usados nas aulas do Senac
 
 ## Experiência
 - Cognizant: Desenvolvedor Full Stack (set 2026 - atual)
@@ -24,11 +25,13 @@ Stack principal: Java, Spring Boot, Angular, TypeScript, React, Node.js, PHP, Py
 - F. R. Cont Assessoria: Assistente Administrativo (mai 2024 - out 2024)
 
 ## Certificações
-- Claude Certified Developer - Foundations (Anthropic, out 2026)
-- Agentes Autônomos (Agentic AI), 40h (FIAP, set 2026)
 - Engenharia de Software, 100h (FIAP, ago 2025)
+- Angular: Interfaces Front-End (Senac SP, jul 2024)
+- Desenvolvedor Web Front-End 2: JavaScript (Senac SP, nov 2024)
+- Agentes Autônomos (Agentic AI), 40h (FIAP, set 2026)
 - User Experience (UX), 60h (FIAP, jun 2025)
-- Cursos Senac SP: Inglês Intermediário, JavaScript Front-End, Angular e WordPress
+- Claude Certified Developer - Foundations (Anthropic, out 2026)
+- Outros cursos Senac SP: Inglês Intermediário e WordPress
 
 ## Formação
 - Análise e Desenvolvimento de Sistemas, Universidade Cruzeiro do Sul (previsão dez 2026)

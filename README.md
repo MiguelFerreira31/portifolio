@@ -230,24 +230,37 @@ do carregamento.
 | --- | --- | --- |
 | 0 | **Preloader** | Barra de progresso e nome completo com efeito glitch, exibido em toda visita (pulado só com movimento reduzido ou sem GSAP) |
 | 1 | **Hero** | Nome, cargo, stats animadas, foto com badges e terminal simulado |
-| 2 | **Skills** | 7 cards: Back-End, Front-End, Banco de Dados, Cloud & DevOps, IA/Agentes, WordPress Avançado e Práticas |
+| 2 | **Skills** | 7 cards (Back-End, Front-End, Banco de Dados, Cloud & DevOps, IA/Agentes, WordPress e Práticas), cada tag separada em "Uso diário", "Já utilizei" e "Em estudo" |
 | 3 | **Experiência** | Timeline com Cognizant, Senac SP, Grupo Webnauta (2 cargos) e F. R. Cont |
-| 4 | **Projetos** | Cards filtráveis (Todos / Full Stack / Front-End), com links para GitHub e deploy |
-| 5 | **Stack** | Marquee infinito com as tecnologias dominadas |
+| 4 | **Projetos** | 4 cards em grade 2x2, filtráveis (Todos / Full Stack / Front-End), com links para GitHub e deploy, e linha "Também" para o material didático |
+| 5 | **Stack** | Marquee infinito com a stack, começando pelo uso diário |
 | 6 | **Sobre** | Bio, bloco de código `miguel.profile.ts`, formação e certificações |
 | 7 | **Contato** | Canais diretos (e-mail, telefone/WhatsApp, LinkedIn, GitHub) e formulário que abre o WhatsApp com a mensagem pronta |
 | 8 | **Footer** | Links sociais e copyright |
 
 ### Projetos em destaque
 
-| Projeto | Stack | Links |
-| --- | --- | --- |
-| **LMS Lite** | Java, Spring Boot, Angular, PostgreSQL, Docker, Tailwind CSS | [GitHub](https://github.com/MiguelFerreira31/lms) |
-| **ProCert** | NestJS, Node.js, TypeScript, Prisma, PostgreSQL, React | [GitHub](https://github.com/singlefutureadm-agency/procert-app) |
-| **Cardápio Digital** | React, Node.js, Express, PostgreSQL, Supabase, Socket.io | [GitHub](https://github.com/singlefutureadm-agency/cardapio-digital) |
-| **NFT Marketplace** | React, TypeScript, Vite, TanStack Query, Tailwind CSS, shadcn/ui | [GitHub](https://github.com/MiguelFerreira31/nft-marketplace) |
-| **Encurtador de URLs** | Node.js, Express, TypeScript, Prisma, React, Bootstrap | [GitHub](https://github.com/MiguelFerreira31/url-shortener) |
-| **Trilha HTML & CSS (UC 15)** | HTML5, CSS3, JavaScript, GitHub Pages | [GitHub](https://github.com/MiguelFerreira31/aulaUC15) |
+| Projeto | Stack | Contexto | Links |
+| --- | --- | --- | --- |
+| **LMS Lite** | Java, Spring Boot, Angular, PostgreSQL, Flyway, Testcontainers, Docker | Projeto em equipe (2 contribuidores) | [GitHub](https://github.com/MiguelFerreira31/lms) · [AUDITORIA.md](https://github.com/MiguelFerreira31/lms/blob/master/AUDITORIA.md) |
+| **ProCert** | NestJS, TypeScript, Prisma, PostgreSQL, React | Projeto em equipe (organização Single Future, licença proprietária) | [GitHub](https://github.com/singlefutureadm-agency/procert-app) |
+| **Cardápio Digital** | React, Node.js, Express, PostgreSQL, Supabase, Socket.io | Freelance (Single Future, licença proprietária) | [GitHub](https://github.com/singlefutureadm-agency/cardapio-digital) |
+| **NFT Marketplace** | React, TypeScript, Vite, TanStack Query, Tailwind CSS, shadcn/ui | Desafio técnico (API simulada com MSW) | [GitHub](https://github.com/MiguelFerreira31/nft-marketplace) |
+
+Fora do grid, como link discreto: [Trilha HTML & CSS (UC 15)](https://github.com/MiguelFerreira31/aulaUC15), material didático das aulas do Senac.
+O Encurtador de URLs (`url-shortener`) saiu do portfólio; o repositório continua no GitHub.
+
+#### Projetos em destaque e critérios
+
+Entram no grid os quatro projetos com mais evidência pública verificável nos próprios repositórios:
+
+1. **Alinhamento com a stack principal** (Java/Spring Boot/Angular/PostgreSQL): o LMS Lite vem primeiro.
+2. **Testes, CI e documentação**: LMS (52 testes de integração, CI, AUDITORIA.md), Cardápio (107 testes), ProCert (suíte e2e e CI) e NFT Marketplace (Vitest, Playwright, Lighthouse CI, ARCHITECTURE.md).
+3. **Código ou produto no ar**: ProCert, Cardápio e NFT têm deploy; o LMS ainda não.
+4. **Honestidade sobre autoria e contexto**: cada card indica "Projeto em equipe", "Freelance" ou "Desafio técnico", conforme o que o repositório mostra.
+
+Ficaram de fora o Encurtador de URLs (desafio simples, sem testes nem CI) e a Trilha UC 15 (material de aula, não um produto).
+O número no hero ("Projetos em destaque") é igual ao de cards exibidos.
 
 ---
 
@@ -373,3 +386,12 @@ Preserve a pasta `assets/` junto do `index.html`: os caminhos são relativos.
 ---
 
 <p align="center">Feito com GSAP, Canvas e muito café ☕</p>
+
+## Notas técnicas (auditoria)
+
+- GSAP 3.12.5 (cdnjs) com `defer` + SRI sha512; `main.js` detecta falha e aplica `no-anim no-gsap`. `window.Portfolio.canAnimate` gate todos os módulos animados.
+- Preloader ~0,8 s, só na 1ª visita da sessão (`sessionStorage.plSeen`), failsafe de 2,5 s libera o scroll.
+- Canvas do hero e cursor pausam com aba oculta / hero fora da viewport; animações CSS infinitas pausam via `.paused` / `.hero-off`. Nada roda com `prefers-reduced-motion`.
+- `whatsapp.js` reage ao evento `portfolio:hero` (sem delay fixo). VLibras com try/catch.
+- Imagens: `miguel.webp` via `<picture>`; duplicata `miguel-ferreira.jpg` removida; `og-image.png` 1200x630 + `summary_large_image`.
+- Fontes: removidos pesos Rajdhani 300/500. Certificados: modal abre PDF em nova aba em dispositivos touch. PDFs >500 KB (3 arquivos) não foram comprimidos (sem qpdf/gs local).
