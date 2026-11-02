@@ -11,7 +11,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 clamp(20px, 5vw, 60px);
+    padding: 0 max(clamp(20px, 5vw, 60px), calc((100% - var(--container)) / 2));
     height: var(--nav-h);
     background: rgba(5, 15, 20, .88);
     backdrop-filter: blur(24px);
@@ -29,7 +29,7 @@ nav.scrolled {
     font-weight: 900;
     color: var(--cyan);
     text-shadow: 0 0 18px rgba(0, 229, 168, .6);
-    letter-spacing: 2px;
+    letter-spacing: .1em;
     text-decoration: none;
     flex-shrink: 0
 }
@@ -48,7 +48,7 @@ nav.scrolled {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
     font-size: .8rem;
-    letter-spacing: 2px;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--muted);
     text-decoration: none;
@@ -80,7 +80,7 @@ nav.scrolled {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: .78rem;
-    letter-spacing: 3px;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--bg0);
     background: var(--cyan);
@@ -161,14 +161,14 @@ nav.scrolled {
 
 section {
     position: relative;
-    padding: clamp(60px, 10vw, 110px) clamp(24px, 6vw, 80px);
+    padding: clamp(60px, 10vw, 110px) var(--pad-x);
     z-index: 1
 }
 
 .sec-label {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 4px;
+    font-size: .78rem;
+    letter-spacing: .18em;
     color: var(--cyan);
     text-transform: uppercase;
     display: block;
@@ -198,7 +198,7 @@ section {
 footer {
     background: var(--bg0);
     border-top: 1px solid var(--border);
-    padding: clamp(28px, 4vw, 48px) clamp(24px, 6vw, 80px);
+    padding: clamp(28px, 4vw, 48px) var(--pad-x);
     z-index: 1;
     position: relative
 }
@@ -213,19 +213,20 @@ footer {
 
 .footer-inner p {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
+    font-size: .78rem;
     letter-spacing: 1px;
     color: var(--muted)
 }
 
 .f-social {
     display: flex;
-    gap: 10px
+    gap: 8px
 }
 
 .f-sl {
-    width: 34px;
-    height: 34px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
     border: 1px solid var(--border);
     display: flex;
     align-items: center;

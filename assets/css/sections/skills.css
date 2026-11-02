@@ -26,8 +26,8 @@
 .sk-card {
     background: var(--glass);
     border: 1px solid var(--border);
-    flex: 1 1 260px;
-    max-width: 330px;
+    flex: 0 1 calc((100% - 48px) / 4);
+    min-width: 250px;
     text-align: center;
     padding: 28px 24px;
     transition: border-color .3s, transform .3s;
@@ -88,9 +88,60 @@
 
 .sk-tag {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
+    font-size: .78rem;
     letter-spacing: 1px;
     color: var(--cyan);
     border: 1px solid rgba(0, 229, 168, .18);
     padding: 2px 8px
+}
+
+@media(max-width:1180px) {
+    .sk-card {
+        flex-basis: calc((100% - 32px) / 3)
+    }
+}
+
+@media(max-width:860px) {
+    .sk-card {
+        flex-basis: calc((100% - 16px) / 2);
+        min-width: 0
+    }
+}
+
+@media(max-width:560px) {
+    .sk-card {
+        flex-basis: 100%
+    }
+}
+
+.sk-tag {
+    font-size: .78rem;
+    padding: 3px 9px
+}
+
+/* Nível de uso: separa stack diária, já utilizado e em estudo */
+.sk-lvl {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 14px
+}
+
+.sk-lvl+.sk-tags {
+    margin-top: 6px
+}
+
+.sk-tag.is-main {
+    border-color: rgba(0, 229, 168, .6);
+    background: rgba(0, 229, 168, .08)
+}
+
+.sk-tag:not(.is-main) {
+    color: var(--muted)
+}
+
+.sk-tag.is-study {
+    border-style: dashed
 }

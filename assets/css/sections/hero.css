@@ -7,8 +7,8 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: calc(var(--nav-h) + 40px) clamp(24px, 6vw, 80px) 60px;
+    align-items: start;
+    padding: calc(var(--nav-h) + 40px) var(--pad-x) 60px;
     gap: clamp(32px, 5vw, 80px);
     overflow: hidden
 }
@@ -68,8 +68,8 @@
     margin-left: auto;
     margin-right: auto;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 2px;
+    font-size: .78rem;
+    letter-spacing: .1em;
     color: var(--muted);
     transform: translateX(-20px)
 }
@@ -104,7 +104,7 @@
 }
 
 .t-key {
-    color: var(--purple)
+    color: #c49bff
 }
 
 .t-str {
@@ -137,8 +137,8 @@
     align-items: center;
     gap: 8px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 3px;
+    font-size: .78rem;
+    letter-spacing: .12em;
     color: var(--cyan);
     border: 1px solid var(--border);
     padding: 5px 14px;
@@ -148,7 +148,7 @@
 
 .hero-badge::before {
     content: '▶';
-    font-size: .72rem;
+    font-size: .78rem;
     animation: blink 1.2s step-end infinite
 }
 
@@ -185,7 +185,7 @@
 .hero-role {
     font-family: 'Share Tech Mono', monospace;
     font-size: .82rem;
-    letter-spacing: 3px;
+    letter-spacing: .12em;
     color: var(--muted);
     margin-bottom: 20px;
     opacity: 0
@@ -211,7 +211,7 @@
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: .85rem;
-    letter-spacing: 3px;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--bg0);
     background: var(--cyan);
@@ -234,7 +234,7 @@
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
     font-size: .85rem;
-    letter-spacing: 3px;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--cyan);
     background: transparent;
@@ -274,8 +274,8 @@
 
 .stat-l {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 2px;
+    font-size: .78rem;
+    letter-spacing: .1em;
     color: var(--muted);
     margin-top: 4px;
     text-transform: uppercase
@@ -315,8 +315,8 @@
 
 .scroll-hint span {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 3px;
+    font-size: .78rem;
+    letter-spacing: .12em;
     color: var(--muted);
     text-transform: uppercase
 }
@@ -431,8 +431,8 @@
 
 .photo-placeholder p {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 2px;
+    font-size: .78rem;
+    letter-spacing: .1em;
     color: var(--muted);
     text-align: center;
     opacity: .5
@@ -445,7 +445,7 @@
     border: 1px solid var(--border);
     padding: 8px 14px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
+    font-size: .78rem;
     letter-spacing: 1px;
     color: var(--text);
     white-space: nowrap;
@@ -476,7 +476,7 @@
 
 .pb-line {
     display: block;
-    font-size: .72rem;
+    font-size: .78rem;
     color: var(--muted);
     margin-top: 1px
 }
@@ -512,8 +512,8 @@
     position: absolute;
     top: 12%;
     left: -8%;
-    width: 58vw;
-    height: 58vw;
+    width: min(58vw, 1100px);
+    height: min(58vw, 1100px);
     background: radial-gradient(ellipse, rgba(0, 229, 168, .06) 0%, rgba(139, 0, 255, .025) 42%, transparent 68%);
     pointer-events: none;
     z-index: 1;
@@ -653,7 +653,7 @@
     text-decoration: none;
     transition: border-color .2s, background .2s;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .7rem;
+    font-size: .78rem;
     letter-spacing: 1px;
     color: var(--muted)
 }
@@ -672,11 +672,108 @@
 }
 
 .chip-label {
-    font-size: .72rem;
+    font-size: .78rem;
     color: var(--muted2);
     display: block
 }
 
 .chip-val {
     color: var(--text)
+}
+
+/* ─── REFINOS DE DESIGN ─── */
+
+/* stats: 4 colunas iguais com divisores */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    padding-top: 24px
+}
+
+.hero-stats > div {
+    padding: 0 16px;
+    border-left: 1px solid var(--border)
+}
+
+.hero-stats > div:first-child {
+    padding-left: 0;
+    border-left: 0
+}
+
+.stat-l {
+    letter-spacing: .06em;
+    line-height: 1.35
+}
+
+/* foto: overlay navy, borda e brilho verde */
+.photo-frame {
+    filter: drop-shadow(0 0 22px rgba(0, 229, 168, .22))
+}
+
+.photo-frame picture {
+    display: block;
+    position: relative;
+    clip-path: polygon(16px 0%, 100% 0%, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0% 100%, 0% 16px)
+}
+
+.photo-frame picture::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(5, 15, 20, 0) 50%, rgba(5, 15, 20, .55) 100%), linear-gradient(135deg, rgba(0, 229, 168, .10), rgba(8, 24, 32, .22));
+    box-shadow: inset 0 0 0 1px rgba(0, 229, 168, .35)
+}
+
+.photo-img {
+    clip-path: none;
+    filter: saturate(.88) contrast(1.04)
+}
+
+/* contatos do hero: linha de ícones */
+.photo-chips {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    max-width: none
+}
+
+.chip {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+    transition: border-color .18s, background .18s, color .18s, transform .18s
+}
+
+.chip:hover {
+    transform: translateY(-2px)
+}
+
+.chip-ico {
+    width: auto;
+    font-size: 1.25rem;
+    display: inline-flex;
+    color: var(--cyan)
+}
+
+.chip-txt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap
+}
+
+.hero-badge,
+.hero-role {
+    color: #9fd8c3
+}
+
+.hero-desc {
+    max-width: 480px
 }

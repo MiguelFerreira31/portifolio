@@ -62,8 +62,8 @@
 
 .c-m-lbl {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 2px;
+    font-size: .78rem;
+    letter-spacing: .1em;
     color: var(--muted);
     display: block
 }
@@ -94,8 +94,8 @@
 
 .f-field label {
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
-    letter-spacing: 2px;
+    font-size: .78rem;
+    letter-spacing: .1em;
     color: var(--muted);
     text-transform: uppercase
 }
@@ -109,14 +109,21 @@
     padding: 11px 14px;
     font-family: 'Rajdhani', sans-serif;
     font-size: .98rem;
-    outline: none;
     transition: border-color .2s;
     width: 100%
 }
 
 .f-field input:focus,
-.f-field textarea:focus {
+.f-field textarea:focus,
+.f-field select:focus {
     border-color: var(--cyan)
+}
+
+.f-field input:focus-visible,
+.f-field textarea:focus-visible,
+.f-field select:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px
 }
 
 .f-field textarea {
@@ -128,7 +135,7 @@
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
     font-size: .85rem;
-    letter-spacing: 3px;
+    letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--bg0);
     background: var(--cyan);

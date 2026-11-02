@@ -26,6 +26,10 @@
     --glass: rgba(0, 229, 168, 0.04);
     --border: rgba(0, 229, 168, 0.14);
     --nav-h: 72px;
+    --container: 1440px;
+    --gutter: clamp(24px, 6vw, 80px);
+    /* padding lateral: gutter, ou o que sobra além do container (centraliza em telas grandes) */
+    --pad-x: max(var(--gutter), calc((100% - var(--container)) / 2));
 }
 
 body {

@@ -9,11 +9,13 @@
 .about-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 8vw, 100px);
-    align-items: center
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start
 }
 
 .about-code-block {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
     background: rgba(8, 24, 32, .95);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -40,8 +42,8 @@
 .acb-bar .acb-name {
     margin-left: auto;
     margin-right: auto;
-    font-size: .72rem;
-    letter-spacing: 2px;
+    font-size: .78rem;
+    letter-spacing: .1em;
     color: var(--muted);
     transform: translateX(-16px)
 }
@@ -52,7 +54,7 @@
 }
 
 .kw {
-    color: var(--purple)
+    color: #c49bff
 }
 
 .fn {
@@ -120,7 +122,7 @@
 .cert small {
     display: block;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
+    font-size: .78rem;
     color: var(--muted);
     margin-top: 1px
 }
@@ -134,7 +136,7 @@
     justify-content: center;
     margin-top: 2px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .72rem;
+    font-size: .78rem;
     letter-spacing: 1px;
     color: var(--cyan);
     text-decoration: none;
@@ -243,4 +245,113 @@ button.cert-link {
 
 .cm-foot a:hover {
     text-decoration: underline
+}
+
+/* ─── CERTIFICAÇÕES agrupadas ─── */
+
+.about-wrap {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr)
+}
+
+.cert-group {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .78rem;
+    font-weight: 400;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin: 28px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.cert-group::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border)
+}
+
+.cert-groups .certs {
+    margin-top: 0
+}
+
+.cert {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 12px
+}
+
+.cert:has(.cert-link) {
+    flex-wrap: nowrap
+}
+
+.cert > span:not(.cert-ico) {
+    min-width: 0
+}
+
+.cert-link {
+    flex: none;
+    margin: 0;
+    padding: 6px 10px;
+    min-height: 44px;
+    min-width: 44px;
+    border-color: transparent;
+    color: var(--muted)
+}
+
+.cert:hover .cert-link,
+.cert-link:focus-visible {
+    color: var(--cyan);
+    border-color: var(--border)
+}
+
+.cert.featured {
+    border-color: rgba(0, 229, 168, .38);
+    background: rgba(0, 229, 168, .07)
+}
+
+.cert.featured .cert-link {
+    color: var(--cyan);
+    border-color: var(--border)
+}
+
+@media(max-width:1024px) {
+    .certs {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:560px) {
+    .cert-link {
+        padding: 6px 8px
+    }
+}
+
+.cert-link {
+    letter-spacing: 0;
+    padding: 6px 4px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 229, 168, .35)
+}
+
+.cert:hover .cert-link,
+.cert.featured .cert-link,
+.cert-link:focus-visible {
+    border-color: transparent
+}
+
+.cert span {
+    font-size: .92rem
+}
+
+/* hover sólido: precisa vencer `.cert:hover .cert-link` / `.cert.featured .cert-link` (cor cyan sobre fundo cyan = 1:1) */
+.cert .cert-link:hover,
+.cert.featured .cert-link:hover {
+    background: var(--cyan);
+    color: var(--bg0);
+    text-decoration-color: transparent
 }
