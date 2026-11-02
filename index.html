@@ -10,7 +10,9 @@
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/img/miguel.jpg" fetchpriority="high" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" /></noscript>
 
     <!-- Estilos — a ordem importa: base → layout → seções → componentes → responsivo -->
     <link rel="stylesheet" href="assets/css/base.css" />
@@ -25,9 +27,12 @@
     <link rel="stylesheet" href="assets/css/sections/contact.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <noscript><style>.reveal,.sk-card,.proj-card,.exp-item,.hero-badge,.hero-name,.hero-role,.hero-desc,.hero-btns,.hero-stats,.scroll-hint,.t-line,.wa-wrap{opacity:1!important;transform:none!important}#preloader{display:none!important}</style></noscript>
 </head>
 
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol><symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol><symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></symbol><symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9Z"/></symbol><symbol id="i-bot" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M12 8V4M8 14h.01M16 14h.01M9 18h6"/><circle cx="12" cy="3" r="1"/></symbol><symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-15-6.7L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 15 6.7L21 16"/><path d="M16 16h5v5"/></symbol><symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5M9 8V2M15 8V2M18 8v4a6 6 0 0 1-12 0V8Z"/></symbol><symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol><symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.8 12.8 0 0 0-6.7 0C6.8 2.8 5.7 3.1 5.7 3.1a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 4.2 10.3c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/></symbol><symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol><symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5Z"/><path d="M20 17v4H6.5A2.5 2.5 0 0 1 4 18.5"/></symbol></defs></svg>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
     <div class="cur-dot" id="curDot"></div>
     <div class="cur-ring" id="curRing"></div>
@@ -40,7 +45,7 @@
         <div class="pl-content">
             <div class="pl-label">PORTFÓLIO · DESENVOLVEDOR FULL STACK</div>
             <div class="pl-name" id="plName"></div>
-            <div class="pl-title">SINGLE FUTURE · SÃO PAULO, SP</div>
+            <div class="pl-title">JAVA · SPRING BOOT · ANGULAR · SÃO PAULO, SP</div>
             <div class="pl-progress">
                 <div class="pl-bar">
                     <div class="pl-fill" id="plFill"></div>
@@ -67,10 +72,11 @@
             <li><a href="#about">Sobre</a></li>
             <li><a href="#contact">Contato</a></li>
         </ul>
-        <a class="nav-cta" href="https://singlefuture.com.br/">Voltar</a>
-        <div class="hamburger" id="hbg"><span></span><span></span><span></span></div>
+        <a class="nav-cta" href="https://linkedin.com/in/miguelcezarferreira" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <button class="hamburger" id="hbg" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </nav>
 
+    <main id="main">
     <!-- ═══ HERO ═══ -->
     <section id="hero">
         <canvas id="heroCanvas"></canvas>
@@ -80,7 +86,8 @@
         <div class="hero-left">
             <div class="hero-badge">FULL STACK DEVELOPER · SÃO PAULO, SP</div>
             <h1 class="hero-name">
-                <span class="ln1">MIGUEL CEZAR</span>
+                <span class="ln1">MIGUEL</span>
+                <span class="sr-only">CEZAR</span>
                 <span class="ln2">FERREIRA</span>
             </h1>
             <div class="hero-role">JAVA · SPRING BOOT · ANGULAR · REACT · NODE.JS · PHP</div>
@@ -106,6 +113,14 @@
                     <div class="stat-n" data-target="4">0</div>
                     <div class="stat-l">Empresas</div>
                 </div>
+                <div>
+                    <div class="stat-n" data-target="3">3</div>
+                    <div class="stat-l">Formações</div>
+                </div>
+                <div>
+                    <div class="stat-n" data-target="8">8</div>
+                    <div class="stat-l">Certificações</div>
+                </div>
             </div>
         </div>
 
@@ -119,19 +134,13 @@
 
                                         <img class="photo-img" src="assets/img/miguel-ferreira.jpg" alt="Miguel Cezar Ferreira" />
 
-
-
-                    <div class="photo-badge pb-top"><span class="pb-dot"></span>Disponível para projetos<span class="pb-line">Open to work</span></div>
+                    <div class="photo-badge pb-top"><span class="pb-dot"></span>Disponível para freelas<span class="pb-line">Single Future</span></div>
                     <div class="photo-badge pb-bottom">São Paulo, SP<span class="pb-line">Brazil · Remote OK</span>
                     </div>
                 </div>
 
                 <div class="photo-chips">
-                    <a class="chip" href="https://github.com/MiguelFerreira31" target="_blank">
-                        <span class="chip-ico">⌥</span>
-                        <div><span class="chip-label">GitHub</span><span class="chip-val">MiguelFerreira31</span></div>
-                    </a>
-                    <a class="chip" href="https://linkedin.com/in/miguelcezarferreira" target="_blank">
+                    <a class="chip" href="https://linkedin.com/in/miguelcezarferreira" target="_blank" rel="noopener noreferrer">
                         <span class="chip-ico">↗</span>
                         <div><span class="chip-label">LinkedIn</span><span class="chip-val">miguelcezarferreira</span>
                         </div>
@@ -141,16 +150,21 @@
                         <div><span class="chip-label">Email</span><span class="chip-val">miguelccezarferreira</span>
                         </div>
                     </a>
+                    <a class="chip" href="https://wa.me/5511951863723" target="_blank" rel="noopener noreferrer">
+                        <span class="chip-ico">☏</span>
+                        <div><span class="chip-label">WhatsApp</span><span class="chip-val">(11) 95186-3723</span>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Terminal animado -->
-            <div class="terminal" id="heroTerminal" style="margin-top:24px;width:100%;max-width:clamp(300px,38vw,460px)">
+            <div class="terminal" id="heroTerminal" style="margin-top:8px;width:100%;max-width:clamp(300px,38vw,460px)">
                 <div class="terminal-bar">
                     <div class="t-dot t-dot-r"></div>
                     <div class="t-dot t-dot-y"></div>
                     <div class="t-dot t-dot-g"></div>
-                    <div class="t-title">miguel@singlefuture:~</div>
+                    <div class="t-title">miguel@dev:~</div>
                 </div>
                 <div class="terminal-body" id="termBody"></div>
             </div>
@@ -167,11 +181,11 @@
         <div class="sec-head reveal">
             <span class="sec-label">// HABILIDADES TÉCNICAS</span>
             <h2 class="sec-title">Stack e Competências</h2>
-            <p class="sec-sub">Domínio sólido em back-end, front-end, agentes de IA, cloud e boas práticas de engenharia de software.</p>
+            <p class="sec-sub">Back-end Java/Spring, PHP e Node.js, front-end Angular e React, WordPress avançado, cloud AWS, agentes de IA e boas práticas de engenharia.</p>
         </div>
         <div class="skills-grid">
             <div class="sk-card">
-                <div class="sk-ico">⚙️</div>
+                <div class="sk-ico"><svg class="ico" aria-hidden="true"><use href="#i-server"/></svg></div>
                 <h3>Back-End</h3>
                 <p>APIs RESTful e microsserviços em Java, PHP, Node.js e Python, com autenticação e autorização JWT.</p>
                 <div class="sk-tags">
@@ -179,7 +193,7 @@
                 </div>
             </div>
             <div class="sk-card">
-                <div class="sk-ico">🖥️</div>
+                <div class="sk-ico"><svg class="ico" aria-hidden="true"><use href="#i-monitor"/></svg></div>
                 <h3>Front-End</h3>
                 <p>Interfaces reativas com foco em UX, SEO técnico e acessibilidade. Angular com standalone components e animações GSAP.</p>
                 <div class="sk-tags">
@@ -187,10 +201,25 @@
                 </div>
             </div>
             <div class="sk-card">
-                <div class="sk-ico">🤖</div>
+                <div class="sk-ico"><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg></div>
+                <h3>Banco de Dados</h3>
+                <p>Modelagem relacional, versionamento de schema e otimização de queries.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">PostgreSQL</span><span class="sk-tag">MySQL</span><span class="sk-tag">SQL Server</span><span class="sk-tag">Prisma ORM</span><span class="sk-tag">Flyway</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></div>
+                <h3>Cloud & DevOps</h3>
+                <p>Deploy e hospedagem em nuvem, containers e pipelines de CI/CD.</p>
+                <div class="sk-tags">
+                    <span class="sk-tag">AWS (EC2, S3, RDS, Lambda, LightSail)</span><span class="sk-tag">Docker</span><span class="sk-tag">Vercel</span><span class="sk-tag">Render</span><span class="sk-tag">Supabase</span><span class="sk-tag">GitHub Actions</span><span class="sk-tag">cPanel</span>
+                </div>
+            </div>
+            <div class="sk-card">
+                <div class="sk-ico"><svg class="ico" aria-hidden="true"><use href="#i-bot"/></svg></div>
                 <h3>IA / Agentes Autônomos</h3>
-                <p>Criação de agentes autônomos de IA em Python, com orquestração de fluxos e integração com LLMs via API.
-                </p>
+                <p>Agentes autônomos de IA em Python, com orquestração de fluxos e integração com LLMs via API.</p>
                 <div class="sk-tags">
                     <span class="sk-tag">LangGraph</span><span class="sk-tag">Pydantic AI</span><span class="sk-tag">CrewAI</span><span class="sk-tag">OpenAI Agents SDK</span>
                 </div>
@@ -326,13 +355,11 @@
                     <div class="exp-company">GRUPO WEBNAUTA · SÃO PAULO (HÍBRIDO)</div>
                     <div class="exp-role">Desenvolvedor Full Stack <span class="exp-type clt">CLT</span></div>
                     <ul class="exp-list">
-                        <li>Desenvolvi e mantive plugins WordPress customizados com PHP, JavaScript e React, incluindo Custom Post Types (CPT), taxonomias, automações via CRON e integração com ERPs, CRMs e plataformas B2B (Bis2Bis, Correios).</li>
-                        <li>Implementei integração de APIs REST com validação via Zod, autenticação JWT e boas práticas de segurança (sanitização e saneamento de dados).</li>
-                        <li>Construí sites e plataformas web responsivas com foco em UX/UI, performance, acessibilidade e SEO técnico, utilizando WordPress, PHP, JavaScript e React.</li>
-                        <li>Desenvolvi plugin de importação automatizada (Bis2Bis → WordPress) com execução agendada via CRON, sincronização periódica e tratamento de erros.</li>
-                        <li>Criei automações em Python (Selenium, Pandas) para coleta, processamento e análise de dados.
-                        </li>
-                        <li>Colaborei com equipes multidisciplinares em ciclos ágeis (Scrum/Kanban), entregando features com qualidade e prazo.</li>
+                        <li>Plugins WordPress customizados em PHP, JavaScript e React: Custom Post Types, taxonomias, automações via CRON e integração com ERPs, CRMs e plataformas B2B (Bis2Bis, Correios).</li>
+                        <li>Integração de APIs REST com validação via Zod, autenticação JWT e sanitização de dados.</li>
+                        <li>Plugin de importação automatizada Bis2Bis para WordPress, com sincronização periódica e tratamento de erros.</li>
+                        <li>Sites e plataformas responsivas com foco em UX/UI, performance, acessibilidade e SEO técnico.</li>
+                        <li>Automações em Python (Selenium, Pandas) para coleta, processamento e análise de dados.</li>
                     </ul>
                     <div class="exp-skills-bar">
                         <div class="sk-bar-row"><span class="sk-bar-label">WordPress</span>
@@ -364,7 +391,7 @@
                 <div class="exp-body">
                     <div class="exp-period">JUN 2025 — SET 2025</div>
                     <div class="exp-company">GRUPO WEBNAUTA · SÃO PAULO (PRESENCIAL)</div>
-                    <div class="exp-role">Web Designer <span class="exp-type clt">CLT</span></div>
+                    <div class="exp-role">Web Designer</div>
                     <ul class="exp-list">
                         <li>Criei e personalizei plataformas de ensino do zero, definindo identidade visual, layout de páginas e experiência do usuário com Elementor e desenvolvimento manual em HTML, CSS e JavaScript.
                         </li>
@@ -441,94 +468,102 @@
         <div class="sec-head reveal">
             <span class="sec-label">// PORTFÓLIO</span>
             <h2 class="sec-title">Projetos em Destaque</h2>
-            <p class="sec-sub">Sistemas construídos com foco em escalabilidade, performance e entrega real de valor.</p>
+            <p class="sec-sub">Soluções entregues com foco em integração, automação e modernização. Código aberto no GitHub.</p>
         </div>
         <div class="proj-filters reveal">
             <button class="f-btn active" data-filter="all">Todos</button>
-            <button class="f-btn" data-filter="web">Web App</button>
-            <button class="f-btn" data-filter="arch">Arquitetura / IA</button>
+            <button class="f-btn" data-filter="fullstack">Full Stack</button>
+            <button class="f-btn" data-filter="front">Front-End</button>
         </div>
         <div class="proj-grid" id="projGrid">
 
-            <div class="proj-card featured" data-cat="web">
+            <div class="proj-card" data-cat="fullstack">
                 <div class="proj-thumb">
-                    <div class="proj-badge">DESTAQUE</div>
-                    <div class="proj-inner c-c">🍽️</div>
+                    <div class="proj-inner c-c"><svg class="ico" aria-hidden="true"><use href="#i-grad"/></svg></div>
                     <div class="proj-scan"></div>
-                    <div class="proj-ov">
-                        <div class="proj-ov-links">
-                            <a href="https://cardapio-digital-delta-two.vercel.app/" target="_blank">DEMO AO VIVO ↗</a>
-                            <a href="https://github.com/singlefutureadm-agency/cardapio-digital" target="_blank" class="gh-link">GITHUB ↗</a>
-                        </div>
-                    </div>
                 </div>
                 <div class="proj-body">
-                    <div class="proj-meta"><span class="proj-cat">Web App · Full Stack · Real-Time</span><span class="proj-yr">2025</span></div>
+                    <div class="proj-meta"><span class="proj-cat">Full Stack · Educação</span><span class="proj-yr">2026</span></div>
+                    <h3>LMS Lite</h3>
+                    <p>Sistema de gestão de cursos: autenticação JWT com perfis Admin, Professor e Aluno, catálogo de cursos, matrículas com progresso por aula, notas, presença e upload de imagens.</p>
+                    <div class="proj-tags"><span class="p-tag">Java</span><span class="p-tag">Spring Boot</span><span class="p-tag">Angular</span><span class="p-tag">PostgreSQL</span><span class="p-tag">Docker</span><span class="p-tag">Tailwind CSS</span><span class="p-tag">JWT</span></div>
+                    <div class="proj-links"><a href="https://github.com/MiguelFerreira31/lms" target="_blank" rel="noopener noreferrer" aria-label="GitHub: código-fonte de LMS Lite">GitHub ↗</a></div>
+                </div>
+            </div>
+
+            <div class="proj-card" data-cat="fullstack">
+                <div class="proj-thumb">
+                    <div class="proj-inner c-p"><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg></div>
+                    <div class="proj-scan"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Full Stack · Migração</span><span class="proj-yr">2026</span></div>
+                    <h3>ProCert</h3>
+                    <p>Migração de um sistema legado em PHP (MVC + MySQL) para uma stack moderna, com API NestJS, Prisma, PostgreSQL e front-end React, autenticação JWT e guards por papel.</p>
+                    <div class="proj-tags"><span class="p-tag">NestJS</span><span class="p-tag">Node.js</span><span class="p-tag">TypeScript</span><span class="p-tag">Prisma</span><span class="p-tag">PostgreSQL</span><span class="p-tag">React</span><span class="p-tag">Vite</span><span class="p-tag">Zod</span></div>
+                    <div class="proj-links"><a href="https://github.com/singlefutureadm-agency/procert-app" target="_blank" rel="noopener noreferrer" aria-label="GitHub: código-fonte de ProCert">GitHub ↗</a><a href="https://procert-app.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Ver online: ProCert">Ver online ↗</a></div>
+                </div>
+            </div>
+
+            <div class="proj-card" data-cat="fullstack">
+                <div class="proj-thumb">
+                    <div class="proj-inner c-c"><svg class="ico" aria-hidden="true"><use href="#i-utensils"/></svg></div>
+                    <div class="proj-scan"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Full Stack · Tempo real</span><span class="proj-yr">2026</span></div>
                     <h3>Cardápio Digital</h3>
-                    <p>Plataforma completa para restaurantes: cliente escaneia QR Code da mesa, faz pedidos em tempo real via Socket.io, pagamento Pix com QR Code EMV, dashboard admin com kanban, analytics, shows com avaliações e feature flags por role.
-                        Deploy em Vercel + Render + Supabase.</p>
-                    <div class="proj-stats">
-                        <div class="proj-stat"><span class="ps-num">60+</span><span class="ps-lbl">Testes</span></div>
-                        <div class="proj-stat"><span class="ps-num">3</span><span class="ps-lbl">Roles</span></div>
-                        <div class="proj-stat"><span class="ps-num">5</span><span class="ps-lbl">Feature Flags</span>
-                        </div>
-                        <div class="proj-stat"><span class="ps-num">RT</span><span class="ps-lbl">Socket.io</span></div>
-                    </div>
-                    <div class="proj-tags">
-                        <span class="p-tag accent">React 19</span><span class="p-tag accent">Node.js</span><span class="p-tag accent">Socket.io</span><span class="p-tag">PostgreSQL</span><span class="p-tag">Prisma</span><span class="p-tag">Supabase</span>
-                        <span
-                            class="p-tag">Pix EMV
-                            </span><span class="p-tag">GSAP</span><span class="p-tag">Jest</span><span class="p-tag">Zod</span>
-                    </div>
+                    <p>Cardápio digital com pedidos em tempo real via QR code, painel administrativo, pagamento Pix, analytics e controle de funcionalidades por perfil.</p>
+                    <div class="proj-tags"><span class="p-tag">React</span><span class="p-tag">Node.js</span><span class="p-tag">Express</span><span class="p-tag">PostgreSQL</span><span class="p-tag">Supabase</span><span class="p-tag">Socket.io</span><span class="p-tag">Vercel</span><span class="p-tag">Render</span></div>
+                    <div class="proj-links"><a href="https://github.com/singlefutureadm-agency/cardapio-digital" target="_blank" rel="noopener noreferrer" aria-label="GitHub: código-fonte de Cardápio Digital">GitHub ↗</a><a href="https://cardapio-digital-delta-two.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Ver online: Cardápio Digital">Ver online ↗</a></div>
                 </div>
             </div>
 
-            <div class="proj-card" data-cat="web">
+            <div class="proj-card" data-cat="front">
                 <div class="proj-thumb">
-                    <div class="proj-inner c-p">🔗</div>
+                    <div class="proj-inner c-p"><svg class="ico" aria-hidden="true"><use href="#i-box"/></svg></div>
                     <div class="proj-scan"></div>
-                    <div class="proj-ov"><a href="https://github.com/MiguelFerreira31/url-shortener" target="_blank">VER
-                            GITHUB ↗</a></div>
                 </div>
                 <div class="proj-body">
-                    <div class="proj-meta"><span class="proj-cat">Web App · Full Stack</span><span class="proj-yr">2025</span></div>
+                    <div class="proj-meta"><span class="proj-cat">Front-End · Desafio técnico</span><span class="proj-yr">2026</span></div>
+                    <h3>NFT Marketplace</h3>
+                    <p>Solução de um desafio front-end com arquitetura documentada, cache e estado com TanStack Query, API simulada com MSW e Socket.IO, testes unitários e E2E e Lighthouse CI.</p>
+                    <div class="proj-tags"><span class="p-tag">React</span><span class="p-tag">TypeScript</span><span class="p-tag">Vite</span><span class="p-tag">TanStack Query</span><span class="p-tag">Tailwind CSS</span><span class="p-tag">shadcn/ui</span><span class="p-tag">Vitest</span><span class="p-tag">Playwright</span></div>
+                    <div class="proj-links"><a href="https://github.com/MiguelFerreira31/nft-marketplace" target="_blank" rel="noopener noreferrer" aria-label="GitHub: código-fonte de NFT Marketplace">GitHub ↗</a><a href="https://nft-marketplace-eta-peach.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Ver online: NFT Marketplace">Ver online ↗</a></div>
+                </div>
+            </div>
+
+            <div class="proj-card" data-cat="fullstack">
+                <div class="proj-thumb">
+                    <div class="proj-inner c-c"><svg class="ico" aria-hidden="true"><use href="#i-link"/></svg></div>
+                    <div class="proj-scan"></div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-meta"><span class="proj-cat">Full Stack · Desafio técnico</span><span class="proj-yr">2025</span></div>
                     <h3>Encurtador de URLs</h3>
-                    <p>Aplicação com painel de cliques, estatísticas por plataforma e visual Liquid Glass. Backend TypeScript com Prisma e nanoid. Frontend React com atualização automática a cada 5 segundos.</p>
-                    <div class="proj-tags"><span class="p-tag">React</span><span class="p-tag">TypeScript</span><span class="p-tag">Node.js</span><span class="p-tag">Prisma</span><span class="p-tag">Bootstrap</span><span class="p-tag">Liquid Glass</span></div>
+                    <p>Encurtador de URLs com painel de cliques e estatísticas por plataforma, API em Express com Prisma e interface em React com efeito Liquid Glass.</p>
+                    <div class="proj-tags"><span class="p-tag">Node.js</span><span class="p-tag">Express</span><span class="p-tag">TypeScript</span><span class="p-tag">Prisma</span><span class="p-tag">React</span><span class="p-tag">Bootstrap</span></div>
+                    <div class="proj-links"><a href="https://github.com/MiguelFerreira31/url-shortener" target="_blank" rel="noopener noreferrer" aria-label="GitHub: código-fonte de Encurtador de URLs">GitHub ↗</a></div>
                 </div>
             </div>
 
-            <div class="proj-card" data-cat="web">
+            <div class="proj-card" data-cat="front">
                 <div class="proj-thumb">
-                    <div class="proj-inner c-pu">EX</div>
+                    <div class="proj-inner c-p"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></div>
                     <div class="proj-scan"></div>
-                    <div class="proj-ov"><a href="https://github.com/MiguelFerreira31/exfe" target="_blank">VER GITHUB
-                            ↗</a></div>
                 </div>
                 <div class="proj-body">
-                    <div class="proj-meta"><span class="proj-cat">Web App · MVC Próprio</span><span class="proj-yr">2025</span></div>
-                    <h3>EXFE</h3>
-                    <p>Aplicação web com SCSS, SwiperJS e BoxIcons. Backend PHP com framework MVC customizado e consumo de APIs externas. App mobile em desenvolvimento como próximo passo.</p>
-                    <div class="proj-tags"><span class="p-tag">PHP</span><span class="p-tag">HTML5</span><span class="p-tag">SCSS</span><span class="p-tag">JavaScript</span><span class="p-tag">SwiperJS</span><span class="p-tag">MVC</span></div>
+                    <div class="proj-meta"><span class="proj-cat">Front-End · Material didático</span><span class="proj-yr">2026</span></div>
+                    <h3>Trilha HTML & CSS (UC 15)</h3>
+                    <p>Material didático autoral da UC 15 no Senac: 15 lições, guias de referência, mini-jogos de prática e desafios de recriação de sites, em HTML, CSS e JavaScript puros.</p>
+                    <div class="proj-tags"><span class="p-tag">HTML5</span><span class="p-tag">CSS3</span><span class="p-tag">JavaScript</span><span class="p-tag">GitHub Pages</span></div>
+                    <div class="proj-links"><a href="https://github.com/MiguelFerreira31/aulaUC15" target="_blank" rel="noopener noreferrer" aria-label="GitHub: código-fonte de Trilha HTML & CSS (UC 15)">GitHub ↗</a></div>
                 </div>
             </div>
 
-            <div class="proj-card" data-cat="arch">
-                <div class="proj-thumb">
-                    <div class="proj-inner c-a">AI</div>
-                    <div class="proj-scan"></div>
-                    <div class="proj-ov"><a href="https://singlefuture.com.br/desafio/" target="_blank">VER PROPOSTA
-                            ↗</a></div>
-                </div>
-                <div class="proj-body">
-                    <div class="proj-meta"><span class="proj-cat">Arquitetura · IA · E-Learning</span><span class="proj-yr">2025</span></div>
-                    <h3>Desafio Técnico DevFullStack</h3>
-                    <p>Proposta de nova arquitetura para plataforma e-learning com geração de cursos personalizados via IA. Fluxo adaptativo: reutiliza aulas do catálogo ou gera novos conteúdos sob demanda, preservando o sistema de formações existente.</p>
-                    <div class="proj-tags"><span class="p-tag">Arquitetura</span><span class="p-tag">IA /
-                            LLM</span><span class="p-tag">E-Learning</span><span class="p-tag">API REST</span></div>
-                </div>
-            </div>
-
+        </div>
+        <div class="proj-more reveal">
+            <a class="btn-s" href="https://github.com/MiguelFerreira31" target="_blank" rel="noopener noreferrer">Ver mais no GitHub →</a>
         </div>
     </section>
 
@@ -541,73 +576,58 @@
         <div class="stack-marquee">
             <div class="stack-track">
                 <div class="s-item">
-                    <div class="s-dot"></div><span>PHP</span>
+                    <div class="s-dot"></div><span>Java</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>Java</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>Spring Boot</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>React</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>Angular</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>Next.js</span>
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div><span>TypeScript</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-                    <span>Node.js</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>React</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>Angular</span>
+                    <div class="s-dot"></div><span>Next.js</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>Laravel</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>Node.js</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>Python</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>PHP</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>LangGraph</span>
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div><span>Laravel</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>CrewAI</span>
-                </div>
-                <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>OpenAI Agents SDK</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>Python</span>
                 </div>
                 <div class="s-item">
                     <div class="s-dot"></div><span>PostgreSQL</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-                    <span>MySQL</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>MySQL</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
-                    <span>AWS</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>Flyway</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
-                    <span>Socket.io</span>
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div><span>JWT</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>WordPress</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>Docker</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>Prisma ORM</span>
+                    <div class="s-dot"></div><span>AWS</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-                    <span>GitHub Actions</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>WordPress</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>JWT</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>GSAP</span>
                 </div>
                 <div class="s-item">
                     <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
@@ -625,78 +645,62 @@
                     <div class="s-dot"></div><span>Flyway</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>GSAP</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>LangGraph</span>
                 </div>
-                <!-- duplicate -->
+                <div class="s-dup" aria-hidden="true">
                 <div class="s-item">
-                    <div class="s-dot"></div><span>PHP</span>
-                </div>
-                <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>Java</span>
+                    <div class="s-dot"></div><span>Java</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>React</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>Spring Boot</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>Next.js</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>Angular</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-                    <span>Node.js</span>
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div><span>TypeScript</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>Angular</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>React</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>Laravel</span>
+                    <div class="s-dot"></div><span>Next.js</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>Python</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>Node.js</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>LangGraph</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>PHP</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>CrewAI</span>
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div><span>Laravel</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>OpenAI Agents SDK</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>Python</span>
                 </div>
                 <div class="s-item">
                     <div class="s-dot"></div><span>PostgreSQL</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-                    <span>MySQL</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>MySQL</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
-                    <span>AWS</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>Flyway</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div>
-                    <span>Socket.io</span>
+                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div><span>JWT</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
-                    <span>WordPress</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>Docker</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>Prisma ORM</span>
+                    <div class="s-dot"></div><span>AWS</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--green);box-shadow:0 0 6px var(--green)"></div>
-                    <span>GitHub Actions</span>
+                    <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div><span>WordPress</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot"></div><span>JWT</span>
+                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div><span>GSAP</span>
                 </div>
                 <div class="s-item">
                     <div class="s-dot" style="background:var(--purple);box-shadow:0 0 6px var(--purple)"></div>
@@ -714,8 +718,8 @@
                     <div class="s-dot"></div><span>Flyway</span>
                 </div>
                 <div class="s-item">
-                    <div class="s-dot" style="background:var(--pink);box-shadow:0 0 6px var(--pink)"></div>
-                    <span>GSAP</span>
+                    <div class="s-dot" style="background:var(--amber);box-shadow:0 0 6px var(--amber)"></div><span>LangGraph</span>
+                </div>
                 </div>
             </div>
         </div>
@@ -749,12 +753,27 @@
                 <p>Domínio do ciclo completo com Java (Spring Boot), PHP (MVC, Laravel), Node.js e Python no back-end, e React, Next.js, Angular e TypeScript no front-end. Aplico Clean Architecture, SOLID, Design Patterns e microsserviços, com experiência em AWS, Vercel, Supabase, CI/CD com GitHub Actions e agentes autônomos de IA em Python (LangGraph, Pydantic AI, CrewAI, OpenAI Agents SDK). Docência no Senac São Paulo, metodologias ágeis e inglês profissional.</p>
 
                 <div class="certs">
+                    <div class="cert"><div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg></div><span>Claude Certified Developer - Foundations<small>Anthropic · Out 2026</small></span><button class="cert-link" type="button" aria-label="Ver credencial: Claude Certified Developer - Foundations" data-pdf="assets/certificados/claude-certified-developer-foundations.pdf" data-title="Claude Certified Developer - Foundations" data-verify="https://www.credly.com/badges/d65d3c7d-ccbe-46fa-87f2-622520132f07/public_url">Ver credencial</button></div>
+                    <div class="cert"><div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg></div><span>Agentes Autônomos (Agentic AI) · 40h<small>FIAP Nano Courses · Set 2026</small></span><button class="cert-link" type="button" aria-label="Ver credencial: Agentes Autônomos (Agentic AI) · 40h" data-pdf="assets/certificados/agentes-autonomos-agentic-ai.pdf" data-title="Agentes Autônomos (Agentic AI) · 40h" data-verify="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=bcb40d1b4efdf963360606ee47d7e155&action=view">Ver credencial</button></div>
+                    <div class="cert"><div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg></div><span>Engenharia de Software · 100h<small>FIAP Nano Courses · Ago 2025</small></span><button class="cert-link" type="button" aria-label="Ver credencial: Engenharia de Software · 100h" data-pdf="assets/certificados/engenharia-de-software.pdf" data-title="Engenharia de Software · 100h" data-verify="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=e21bcd1b4186ff4a6af8ce536c53f517&action=view">Ver credencial</button></div>
+                    <div class="cert"><div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg></div><span>User Experience (UX) · 60h<small>FIAP Nano Courses · Jun 2025</small></span><button class="cert-link" type="button" aria-label="Ver credencial: User Experience (UX) · 60h" data-pdf="assets/certificados/user-experience-ux.pdf" data-title="User Experience (UX) · 60h" data-verify="https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=f9f0d6f5465d85f2f412e2e46bbda1e4&action=view">Ver credencial</button></div>
                     <div class="cert">
-                        <div class="cert-ico">🎓</div><span>ADS · Cruzeiro do Sul<small>Fev 2025 – Dez 2026</small></span>
+                        <div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></div><span>Inglês Intermediário<small>Senac SP · Fev 2025</small></span>
+                    <button class="cert-link" type="button" aria-label="Ver credencial: Inglês Intermediário" data-pdf="assets/certificados/ingles-intermediario.pdf" data-title="Inglês Intermediário">Ver credencial</button></div>
+                    <div class="cert">
+                        <div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></div><span>Desenvolvedor Web Front-End 2: JavaScript<small>Senac SP · Nov 2024</small></span>
+                    <button class="cert-link" type="button" aria-label="Ver credencial: Desenvolvedor Web Front-End 2: JavaScript" data-pdf="assets/certificados/desenvolvedor-web-front-end-2-javascript.pdf" data-title="Desenvolvedor Web Front-End 2: JavaScript">Ver credencial</button></div>
+                    <div class="cert">
+                        <div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></div><span>Angular: Interfaces Front-End<small>Senac SP · Jul 2024</small></span>
+                    <button class="cert-link" type="button" aria-label="Ver credencial: Angular: Interfaces Front-End" data-pdf="assets/certificados/angular-interfaces-front-end.pdf" data-title="Angular: Interfaces Front-End">Ver credencial</button></div>
+                    <div class="cert">
+                        <div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></div><span>Criação e Gerenciamento de Sites WordPress<small>Senac SP · Nov 2023</small></span>
+                    <button class="cert-link" type="button" aria-label="Ver credencial: Criação e Gerenciamento de Sites WordPress" data-pdf="assets/certificados/criacao-e-gerenciamento-de-sites-wordpress.pdf" data-title="Criação e Gerenciamento de Sites WordPress">Ver credencial</button></div>
+                    <div class="cert">
+                        <div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-grad"/></svg></div><span>Análise e Desenvolvimento de Sistemas<small>Universidade Cruzeiro do Sul · Fev 2025 – Dez 2026 (previsão)</small></span>
                     </div>
                     <div class="cert">
-                        <div class="cert-ico">📜</div><span>Téc. Informática p/ Internet<small>Senac SP · Abr 2024 –
-                                Jun 2025</small></span>
+                        <div class="cert-ico"><svg class="ico" aria-hidden="true"><use href="#i-grad"/></svg></div><span>Téc. Informática para Internet<small>Senac SP · Abr 2024 – Jun 2025</small></span>
                     </div>
                     <div class="cert">
                         <div class="cert-ico">📜</div><span>Técnico em Informática<small>Senac SP · Ago 2022 – Mar
@@ -794,54 +813,62 @@
             <div class="contact-left reveal">
                 <span class="sec-label">// CONTATO</span>
                 <h2 class="sec-title">Vamos Trabalhar Juntos</h2>
-                <p>Aberto a oportunidades, projetos freelance e parcerias. Resposta rápida garantida.</p>
+                <p>Aberto a oportunidades, projetos freelance (Single Future) e parcerias. Resposta rápida garantida.</p>
                 <div class="c-methods">
-                    <a class="c-method" href="mailto:miguelccezarferreira@gmail.com"><span class="c-m-ico">✉️</span>
+                    <a class="c-method" href="mailto:miguelccezarferreira@gmail.com"><span class="c-m-ico"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span>
                         <div><span class="c-m-lbl">E-mail</span><span
                                 class="c-m-val">miguelccezarferreira@gmail.com</span></div>
                     </a>
-                    <a class="c-method" href="tel:+5511951863723"><span class="c-m-ico">📱</span>
-                        <div><span class="c-m-lbl">WhatsApp</span><span class="c-m-val">(11) 95186-3723</span></div>
-                    </a>
-                    <a class="c-method" href="https://linkedin.com/in/miguelcezarferreira" target="_blank"><span
-                            class="c-m-ico">💼</span>
-                        <div><span class="c-m-lbl">LinkedIn</span><span class="c-m-val">miguelcezarferreira</span></div>
-                    </a>
-                    <a class="c-method" href="https://github.com/MiguelFerreira31" target="_blank"><span
-                            class="c-m-ico">🐙</span>
+                    <a class="c-method" href="https://github.com/MiguelFerreira31" target="_blank" rel="noopener noreferrer"><span class="c-m-ico"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg></span>
                         <div><span class="c-m-lbl">GitHub</span><span class="c-m-val">MiguelFerreira31</span></div>
                     </a>
-                    <a class="c-method" href="https://singlefuture.com.br/miguel-ferreira/" target="_blank"><span
-                            class="c-m-ico">🌐</span>
-                        <div><span class="c-m-lbl">Portfólio</span><span
-                                class="c-m-val">singlefuture.com.br/miguel-ferreira</span>
-                        </div>
+                    <a class="c-method" href="tel:+5511951863723"><span class="c-m-ico"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                        <div><span class="c-m-lbl">Telefone / WhatsApp</span><span class="c-m-val">(11) 95186-3723</span></div>
+                    </a>
+                    <a class="c-method" href="https://linkedin.com/in/miguelcezarferreira" target="_blank" rel="noopener noreferrer"><span
+                            class="c-m-ico"><svg class="ico" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+                        <div><span class="c-m-lbl">LinkedIn</span><span class="c-m-val">miguelcezarferreira</span></div>
                     </a>
                 </div>
             </div>
-            <div class="c-form reveal">
+            <form class="c-form reveal" id="contactForm">
                 <div class="f-row">
-                    <div class="f-field"><label>Nome</label><input type="text" placeholder="Seu nome" /></div>
-                    <div class="f-field"><label>E-mail</label><input type="email" placeholder="seu@email.com" /></div>
+                    <div class="f-field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required /></div>
+                    <div class="f-field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" placeholder="seu@email.com (opcional)" autocomplete="email" /></div>
                 </div>
-                <div class="f-field"><label>Assunto</label><input type="text" placeholder="Projeto, oportunidade, parceria..." /></div>
-                <div class="f-field"><label>Mensagem</label><textarea placeholder="Descreva sua proposta ou projeto..."></textarea></div>
-                <button class="f-submit" id="submitBtn" type="button">ENVIAR MENSAGEM →</button>
-            </div>
+                <div class="f-field"><label for="f-assunto">Assunto</label><input id="f-assunto" name="assunto" type="text" placeholder="Projeto, oportunidade, parceria..." /></div>
+                <div class="f-field"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" placeholder="Descreva sua proposta ou projeto..." required></textarea></div>
+                <button class="f-submit" id="submitBtn" type="submit">ENVIAR PELO WHATSAPP →</button>
+                <p class="f-note" id="formNote" role="status">Ao enviar, o WhatsApp abre com a mensagem pronta para você confirmar o envio.</p>
+            </form>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="footer-inner">
             <p>© 2026 Miguel Cezar Ferreira · Full Stack Developer · São Paulo, SP</p>
             <div class="f-social">
-                <a class="f-sl" href="https://github.com/MiguelFerreira31" target="_blank">GH</a>
-                <a class="f-sl" href="https://linkedin.com/in/miguelcezarferreira" target="_blank">IN</a>
-                <a class="f-sl" href="mailto:miguelccezarferreira@gmail.com">@</a>
-                <a class="f-sl" href="tel:+5511951863723">WA</a>
+                <a class="f-sl" href="https://linkedin.com/in/miguelcezarferreira" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn"><span aria-hidden="true">IN</span></a>
+                <a class="f-sl" href="https://github.com/MiguelFerreira31" target="_blank" rel="me noopener noreferrer" aria-label="GitHub"><span aria-hidden="true">GH</span></a>
+                <a class="f-sl" href="mailto:miguelccezarferreira@gmail.com" aria-label="E-mail"><span aria-hidden="true">@</span></a>
+                <a class="f-sl" href="tel:+5511951863723" aria-label="Telefone"><span aria-hidden="true">WA</span></a>
             </div>
         </div>
     </footer>
+
+    <dialog class="cert-modal" id="certModal" aria-labelledby="certModalTitle">
+        <div class="cm-head">
+            <h2 id="certModalTitle"></h2>
+            <button class="cm-close" id="certClose" type="button" aria-label="Fechar certificado">&times;</button>
+        </div>
+        <iframe class="cm-frame" id="certFrame" title="Certificado em PDF"></iframe>
+        <div class="cm-foot">
+            <a id="certOpen" href="#" target="_blank" rel="noopener noreferrer">Abrir PDF em nova aba ↗</a>
+            <a id="certVerify" href="#" target="_blank" rel="noopener noreferrer" hidden>Validar online ↗</a>
+        </div>
+    </dialog>
 
     <!-- ─── WHATSAPP FIXED BTN ─── -->
     <div class="wa-wrap" id="waBtnWrap">
@@ -864,10 +891,20 @@
     </div>
 
 
+    <!-- VLibras (Governo Federal): tradutor de conteúdo para Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
     <!-- Bibliotecas de terceiros -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <script>if (!window.gsap || !window.ScrollTrigger) document.documentElement.classList.add('no-anim', 'no-gsap');</script>
 
     <!-- Bootstrap da aplicação (deve vir antes dos módulos) -->
     <script src="assets/js/main.js"></script>
@@ -885,6 +922,8 @@
     <script src="assets/js/modules/skills.js"></script>
     <script src="assets/js/modules/contact-form.js"></script>
     <script src="assets/js/modules/whatsapp.js"></script>
+    <script src="assets/js/modules/cert-modal.js"></script>
+    <script src="assets/js/modules/vlibras.js"></script>
 </body>
 
 </html>

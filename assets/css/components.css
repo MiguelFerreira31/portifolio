@@ -195,7 +195,7 @@
 .wa-tooltip-label {
     display: block;
     font-family: 'Share Tech Mono', monospace;
-    font-size: .58rem;
+    font-size: .72rem;
     letter-spacing: 3px;
     color: var(--cyan);
     text-transform: uppercase
@@ -270,4 +270,149 @@
     .wa-tooltip {
         display: none
     }
+}
+
+
+/* ─── CURSOR: só aparece com mouse, depois do primeiro movimento ─── */
+
+.cur-dot,
+.cur-ring {
+    visibility: hidden
+}
+
+.cursor-on .cur-dot,
+.cursor-on .cur-ring {
+    visibility: visible
+}
+
+@media (pointer: coarse),
+(hover: none) {
+    .cur-dot,
+    .cur-ring {
+        display: none
+    }
+}
+
+/* ─── ACESSIBILIDADE ─── */
+
+.skip-link {
+    position: fixed;
+    top: -60px;
+    left: 12px;
+    z-index: 10001;
+    padding: 10px 16px;
+    background: var(--cyan);
+    color: var(--bg0);
+    font-weight: 700;
+    text-decoration: none;
+    transition: top .2s
+}
+
+.skip-link:focus {
+    top: 12px
+}
+
+:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px
+}
+
+.ico {
+    width: 1em;
+    height: 1em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0
+}
+
+.sk-ico,
+.cert-ico,
+.proj-inner {
+    color: var(--cyan)
+}
+
+.proj-inner.c-p {
+    color: var(--purple)
+}
+
+.split-word {
+    display: inline-block;
+    white-space: nowrap
+}
+
+.proj-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px
+}
+
+.f-note {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .72rem;
+    color: var(--muted);
+    line-height: 1.5
+}
+
+.hamburger {
+    background: none;
+    border: 0;
+    padding: 10px;
+    margin: -10px
+}
+
+.f-btn {
+    min-height: 44px
+}
+
+.f-sl {
+    min-width: 44px;
+    min-height: 44px
+}
+
+/* ─── SEM ANIMAÇÃO: reduced-motion ou GSAP indisponível ─── */
+
+.no-anim *,
+.no-anim *::before,
+.no-anim *::after {
+    animation: none !important;
+    transition-duration: .01ms !important
+}
+
+.no-anim #preloader,
+.no-anim #heroCanvas,
+.no-gsap #heroTerminal {
+    display: none !important
+}
+
+.no-anim .reveal,
+.no-anim .sk-card,
+.no-anim .proj-card,
+.no-anim .exp-item,
+.no-anim .hero-badge,
+.no-anim .hero-name,
+.no-anim .hero-role,
+.no-anim .hero-desc,
+.no-anim .hero-btns,
+.no-anim .hero-stats,
+.no-anim .scroll-hint,
+.no-anim .t-line,
+.no-anim .split-char,
+.no-anim .wa-wrap {
+    opacity: 1 !important;
+    transform: none !important
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0
 }

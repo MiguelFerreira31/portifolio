@@ -4,7 +4,7 @@ Portfólio pessoal de **Miguel Cezar Ferreira**, Desenvolvedor Full Stack (São 
 Site estático de página única, com estética *cyber/terminal*, animações dirigidas por scroll
 e um hero renderizado em Canvas 2D.
 
-🔗 **Online:** [singlefuture.com.br/miguel-ferreira](https://singlefuture.com.br/miguel-ferreira/)
+🔗 **LinkedIn:** [linkedin.com/in/miguelcezarferreira](https://linkedin.com/in/miguelcezarferreira)
 
 ---
 
@@ -106,6 +106,8 @@ portifolio/
 ├── index.html                      # Único arquivo HTML — apenas markup, sem CSS/JS inline
 ├── README.md
 └── assets/
+    ├── certificados/               # PDFs dos certificados (exibidos no modal)
+    ├── img/                        # Foto de perfil
     ├── css/
     │   ├── base.css                # Reset, design tokens, tipografia base, fundo (grid + scanlines)
     │   ├── layout.css              # Navbar, menu mobile, estrutura base das seções, footer
@@ -133,7 +135,9 @@ portifolio/
             ├── counters.js         # Contadores animados
             ├── projects-filter.js  # Filtro por categoria
             ├── skills.js           # Glow nos cards
-            ├── contact-form.js     # Feedback visual do envio
+            ├── contact-form.js     # Monta a mensagem e abre o WhatsApp (wa.me)
+            ├── cert-modal.js       # Modal com o PDF do certificado
+            ├── vlibras.js          # Widget VLibras (Governo Federal)
             └── whatsapp.js         # Botão flutuante
 ```
 
@@ -224,24 +228,26 @@ do carregamento.
 
 | # | Seção | Conteúdo |
 | --- | --- | --- |
-| 0 | **Preloader** | Barra de progresso e nome com efeito glitch |
+| 0 | **Preloader** | Barra de progresso e nome completo com efeito glitch, exibido em toda visita (pulado só com movimento reduzido ou sem GSAP) |
 | 1 | **Hero** | Nome, cargo, stats animadas, foto com badges e terminal simulado |
-| 2 | **Skills** | 7 cards: Back-End, Front-End, IA/Agentes, Cloud & DevOps, Banco de Dados, CMS/WordPress e Práticas |
-| 3 | **Experiência** | Timeline com Senac SP, Grupo Webnauta, Engecommerce e Single Future |
-| 4 | **Projetos** | Cards filtráveis (Todos / Web App / Arquitetura · IA) |
+| 2 | **Skills** | 7 cards: Back-End, Front-End, Banco de Dados, Cloud & DevOps, IA/Agentes, WordPress Avançado e Práticas |
+| 3 | **Experiência** | Timeline com Cognizant, Senac SP, Grupo Webnauta (2 cargos) e F. R. Cont |
+| 4 | **Projetos** | Cards filtráveis (Todos / Full Stack / Front-End), com links para GitHub e deploy |
 | 5 | **Stack** | Marquee infinito com as tecnologias dominadas |
 | 6 | **Sobre** | Bio, bloco de código `miguel.profile.ts`, formação e certificações |
-| 7 | **Contato** | Canais diretos (e-mail, LinkedIn, GitHub, site) e formulário |
+| 7 | **Contato** | Canais diretos (e-mail, telefone/WhatsApp, LinkedIn, GitHub) e formulário que abre o WhatsApp com a mensagem pronta |
 | 8 | **Footer** | Links sociais e copyright |
 
 ### Projetos em destaque
 
 | Projeto | Stack | Links |
 | --- | --- | --- |
-| **Cardápio Digital** | React 19, Node.js, Socket.io, PostgreSQL, Prisma, Supabase, Pix EMV, Jest, Zod | [Demo](https://cardapio-digital-delta-two.vercel.app/) · [GitHub](https://github.com/singlefutureadm-agency/cardapio-digital) |
-| **Encurtador de URLs** | React, TypeScript, Node.js, Prisma, Bootstrap | [GitHub](https://github.com/MiguelFerreira31/url-shortener) |
-| **EXFE** | PHP (MVC próprio), SCSS, SwiperJS | [GitHub](https://github.com/MiguelFerreira31/exfe) |
-| **Desafio DevFullStack** | Arquitetura, IA/LLM, API REST | [Proposta](https://singlefuture.com.br/desafio/) |
+| **LMS Lite** | Java, Spring Boot, Angular, PostgreSQL, Docker, Tailwind CSS | [GitHub](https://github.com/MiguelFerreira31/lms) |
+| **ProCert** | NestJS, Node.js, TypeScript, Prisma, PostgreSQL, React | [GitHub](https://github.com/singlefutureadm-agency/procert-app) |
+| **Cardápio Digital** | React, Node.js, Express, PostgreSQL, Supabase, Socket.io | [GitHub](https://github.com/singlefutureadm-agency/cardapio-digital) |
+| **NFT Marketplace** | React, TypeScript, Vite, TanStack Query, Tailwind CSS, shadcn/ui | [GitHub](https://github.com/MiguelFerreira31/nft-marketplace) |
+| **Encurtador de URLs** | Node.js, Express, TypeScript, Prisma, React, Bootstrap | [GitHub](https://github.com/MiguelFerreira31/url-shortener) |
+| **Trilha HTML & CSS (UC 15)** | HTML5, CSS3, JavaScript, GitHub Pages | [GitHub](https://github.com/MiguelFerreira31/aulaUC15) |
 
 ---
 
@@ -284,7 +290,7 @@ O projeto não tem dependências nem etapa de build.
 **Opção 1 — abrir direto:**
 
 ```bash
-git clone https://github.com/MiguelFerreira31/portifolio.git
+git clone <url-do-repositorio> portifolio
 cd portifolio
 # basta abrir o index.html no navegador
 ```
@@ -360,10 +366,9 @@ Preserve a pasta `assets/` junto do `index.html`: os caminhos são relativos.
 
 **Miguel Cezar Ferreira** — Full Stack Developer · São Paulo, SP
 
-- 🌐 [singlefuture.com.br/miguel-ferreira](https://singlefuture.com.br/miguel-ferreira/)
 - 💼 [linkedin.com/in/miguelcezarferreira](https://linkedin.com/in/miguelcezarferreira)
-- 💻 [github.com/MiguelFerreira31](https://github.com/MiguelFerreira31)
 - ✉️ miguelccezarferreira@gmail.com
+- 📱 (11) 95186-3723
 
 ---
 

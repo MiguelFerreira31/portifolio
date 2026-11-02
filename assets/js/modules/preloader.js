@@ -7,15 +7,35 @@
     const plName = document.getElementById('plName');
     const plFill = document.getElementById('plFill');
     const plPct = document.getElementById('plPct');
-    'MIGUEL FERREIRA'.split('').forEach(ch => {
-        const s = document.createElement('span');
-        if (ch === ' ') {
-            s.className = 'pl-char pl-space';
-        } else {
+    let done = false;
+
+    function finish() {
+        PL.style.display = 'none';
+        document.body.style.overflowY = '';
+        window.Portfolio.startHero();
+    }
+    /* sem animação (movimento reduzido ou GSAP indisponível): entra direto */
+    if (document.documentElement.classList.contains('no-anim')) {
+        done = true;
+        document.addEventListener('DOMContentLoaded', finish);
+        return;
+    }
+    /* cada palavra é um bloco sem quebra, para o nome só quebrar entre palavras */
+    'MIGUEL CEZAR FERREIRA'.split(' ').forEach((word, i) => {
+        if (i) {
+            const sp = document.createElement('span');
+            sp.className = 'pl-char pl-space';
+            plName.appendChild(sp);
+        }
+        const w = document.createElement('span');
+        w.className = 'pl-word';
+        word.split('').forEach(ch => {
+            const s = document.createElement('span');
             s.className = 'pl-char';
             s.textContent = ch;
-        }
-        plName.appendChild(s);
+            w.appendChild(s);
+        });
+        plName.appendChild(w);
     });
     gsap.to('.pl-corner', {
         opacity: 1,
@@ -44,21 +64,20 @@
     let pct = 0;
 
     function step() {
-        pct = Math.min(pct + Math.random() * 5 + 1.5, 100);
+        if (done) return;
+        pct = Math.min(pct + Math.random() * 4 + 2, 100);
         plFill.style.width = pct + '%';
         plPct.textContent = Math.round(pct) + '%';
-        if (pct < 100) setTimeout(step, 38 + Math.random() * 42);
+        if (pct < 100) setTimeout(step, 45 + Math.random() * 40);
         else setTimeout(exit, 380);
     }
-    setTimeout(step, 650);
+    setTimeout(step, 450);
 
     function exit() {
+        if (done) return;
+        done = true;
         gsap.timeline({
-                onComplete: () => {
-                    PL.style.display = 'none';
-                    document.body.style.overflowY = '';
-                    window.Portfolio.startHero();
-                }
+                onComplete: finish
             })
             .to('.pl-char', {
                 y: -80,

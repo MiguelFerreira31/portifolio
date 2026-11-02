@@ -4,6 +4,10 @@
 
 (function() {
     let ran = false;
+    /* o HTML já traz o valor final (para robôs sem JS); aqui o contador volta a 0 antes de animar */
+    document.querySelectorAll('[data-target]').forEach(el => {
+        el.textContent = '0' + (el.dataset.suffix || '');
+    });
     ScrollTrigger.create({
         trigger: '.hero-stats',
         start: 'top 85%',
@@ -21,10 +25,10 @@
                     delay: i * .12,
                     ease: 'power2.out',
                     onUpdate: function() {
-                        el.textContent = Math.round(this.targets()[0].v)
+                        el.textContent = Math.round(this.targets()[0].v) + (el.dataset.suffix || '')
                     },
                     onComplete: () => {
-                        el.textContent = t;
+                        el.textContent = t + (el.dataset.suffix || '');
                         el.classList.remove('counting')
                     }
                 });
