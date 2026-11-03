@@ -138,17 +138,6 @@
     window.Portfolio.startHero = startHero;
     if (!window.Portfolio.canAnimate) return;
 
-    gsap.to('#heroCanvas', {
-        opacity: .5,
-        y: 80,
-        ease: 'none',
-        scrollTrigger: {
-            trigger: '#hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true
-        }
-    });
 
     /* ── PHOTO FRAME GSAP FLOAT ── */
     gsap.to('#photoFrame', {

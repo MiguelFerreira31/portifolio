@@ -3,7 +3,7 @@
    ========================================================================== */
 
 #stack {
-    background: var(--bg0);
+    background: transparent;
     padding: clamp(40px, 6vw, 70px) 0;
     overflow: hidden
 }
