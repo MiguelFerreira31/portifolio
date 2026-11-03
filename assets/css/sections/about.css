@@ -355,3 +355,12 @@ button.cert-link {
     color: var(--bg0);
     text-decoration-color: transparent
 }
+
+/* logo da instituição nas certificações e formação */
+.cert-ico img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block
+}

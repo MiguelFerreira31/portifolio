@@ -227,3 +227,36 @@
     background: linear-gradient(90deg, var(--cyan), var(--purple));
     transition: width 1.2s cubic-bezier(.16, 1, .3, 1)
 }
+
+/* logo da empresa dentro do marcador da timeline */
+.exp-dot.has-logo {
+    overflow: hidden;
+    padding: 0
+}
+
+.exp-dot.has-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+.exp-dot.has-logo.dim img {
+    filter: grayscale(1);
+    opacity: .6
+}
+
+/* cargos empilhados na mesma empresa (promoção) */
+.exp-step {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: .78rem;
+    letter-spacing: .1em;
+    color: var(--cyan);
+    margin: -10px 0 14px
+}
+
+.exp-role-prev {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px dashed var(--border)
+}
